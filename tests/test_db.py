@@ -1,5 +1,6 @@
 import unittest
 from pathlib import Path
+import json
 
 from db import (VIDEO_URL, connect, import_chapters, parse_captions,
                 restore_backup, search_key, seconds, install_dataset,
@@ -104,6 +105,43 @@ class DatabaseTests(unittest.TestCase):
         install_dataset(self.conn)
         self.assertEqual(self.conn.execute('SELECT detail FROM tips WHERE id=1').fetchone()[0], '自分の修正')
         self.assertIsNone(self.conn.execute('SELECT id FROM tips WHERE id=2').fetchone())
+
+    def test_all_fifty_checklists_are_installed(self):
+        install_dataset(self.conn)
+        champions = self.conn.execute('SELECT * FROM champions').fetchall()
+        self.assertEqual(sum(len(json.loads(c['checklist_json'])) for c in champions), 250)
+        self.assertEqual(sum(len(json.loads(c['supplements_json'])) for c in champions), 37)
+        for champion in champions:
+            self.assertEqual(len(json.loads(champion['checklist_json'])), 5)
+            for item in json.loads(champion['supplements_json']):
+                validate_source(item['source_sec'], champion)
+
+    def test_guides_upgrade_preserves_existing_tips(self):
+        # Simulate an installed v1 DB before the guide migration existed.
+        self.conn.execute("INSERT INTO champions(name,start_sec,end_sec) VALUES('アーゴット',0,944)")
+        self.conn.execute("INSERT INTO tips(champion_id,category,detail,status) VALUES(1,'基本対策','手動で修正したノート','未確認')")
+        self.conn.execute("INSERT INTO app_meta VALUES('bundled_dataset_v1','1')")
+        self.conn.commit()
+        install_dataset(self.conn)
+        install_dataset(self.conn)
+        self.assertEqual(self.conn.execute('SELECT COUNT(*) FROM tips').fetchone()[0], 1)
+        self.assertEqual(self.conn.execute('SELECT detail FROM tips').fetchone()[0], '手動で修正したノート')
+        self.assertEqual(len(json.loads(self.conn.execute('SELECT checklist_json FROM champions').fetchone()[0])), 5)
+
+    def test_malformed_checklist_is_rejected_atomically(self):
+        self.backup['champions'][0]['checklist'] = ['一つだけ']
+        with self.assertRaises(ValueError):
+            restore_backup(self.conn, self.backup)
+        self.assertEqual(self.conn.execute('SELECT COUNT(*) FROM champions').fetchone()[0], 0)
+
+    def test_guides_restore_with_backup(self):
+        champion = self.backup['champions'][0]
+        champion['checklist'] = [f'項目{i}' for i in range(5)]
+        champion['supplements'] = [{'detail': '追加の対策', 'source_sec': 65}]
+        restore_backup(self.conn, self.backup)
+        row = self.conn.execute('SELECT * FROM champions').fetchone()
+        self.assertEqual(json.loads(row['checklist_json']), champion['checklist'])
+        self.assertEqual(json.loads(row['supplements_json']), champion['supplements'])
 
 
 if __name__ == '__main__':

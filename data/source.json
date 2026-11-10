@@ -259,7 +259,11 @@
   "retrieved_date": "2026-11-10",
   "caption_language": "ja",
   "caption_kind": "asr",
-  "summary_method": "各チャプター冒頭の対策解説を中心に、日本語自動字幕からAIで整理。映像・音声とは未照合。",
+  "summary_method": "250項目の見出しは動画のまとめ画面と照合。追加の対策37件と詳しい説明202件は日本語自動字幕から整理。",
   "summary_count": 202,
-  "transcript_segment_count": 12377
+  "transcript_segment_count": 12377,
+  "checklist_item_count": 250,
+  "supplement_count": 37,
+  "detail_note_count": 202,
+  "checklist_method": "各チャンピオンのまとめ画面を目視転記。アイコンは名称に置換。区切り記号の空白を統一。"
 }

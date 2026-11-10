@@ -14,8 +14,15 @@ class PublicSiteTests(unittest.TestCase):
         data = json.loads(payload)
         self.assertEqual(len(data), 50)
         self.assertEqual(sum(len(c['tips']) for c in data), 202)
-        self.assertEqual(set(data[0]), {'name', 'aliases', 'tips'})
+        self.assertEqual(sum(len(c['checklist']) for c in data), 250)
+        self.assertEqual(sum(len(c['supplements']) for c in data), 37)
+        self.assertEqual(set(data[0]), {'name', 'aliases', 'tips', 'checklist', 'supplements'})
+        source = json.loads((ROOT / 'data/counters.json').read_text(encoding='utf-8'))['champions']
         for champion in data:
+            self.assertEqual(len(champion['checklist']), 5)
+            original = next(c for c in source if c['name'] == champion['name'])
+            self.assertEqual(champion['checklist'], original['checklist'])
+            self.assertEqual(champion['supplements'], [s['detail'] for s in original['supplements']])
             for tip in champion['tips']:
                 self.assertEqual(set(tip), {'category', 'detail'})
         self.assertNotIn('__COUNTER_DATA__', html)

@@ -5,17 +5,17 @@ import streamlit as st
 
 from db import (connect, VIDEO_URL, CATEGORIES, seconds, timestamp, video_link,
                 parse_captions, import_chapters, validate_source, restore_backup,
-                install_dataset, matches_champion, search_tips)
+                install_dataset, matches_champion, search_tips, search_key)
 
 st.set_page_config(page_title='LoL TOP対面対策DB', page_icon='🛡️', layout='wide')
 conn = connect()
 install_dataset(conn)
 st.title('🛡️ LoL TOP対面対策DB')
 st.caption('チャンピオン名からTOPレーンの対策を検索')
-counts = conn.execute("SELECT COUNT(*),SUM(status='確認済み') FROM tips").fetchone()
+checklist_count = sum(len(json.loads(row[0])) for row in conn.execute('SELECT checklist_json FROM champions'))
 col1, col2 = st.columns(2)
 col1.metric('収録チャンピオン', conn.execute('SELECT COUNT(*) FROM champions').fetchone()[0])
-col2.metric('対策ノート', counts[0])
+col2.metric('対策チェックポイント', checklist_count)
 search_tab, review_tab, setup_tab = st.tabs(['🔎 対策を検索', '✍️ 対策を登録・確認', '⚙️ 字幕・チャプターを取り込む'])
 
 with setup_tab:
@@ -66,16 +66,29 @@ with search_tab:
     else:
         keyword = st.text_input('対面チャンピオン名で検索', placeholder='例：カミール / かみーる / Camille')
         matches = [c for c in champions if matches_champion(keyword, c['name'])]
+        exact_matches = [c for c in matches if search_key(c['name']) == search_key(keyword)]
+        if exact_matches:
+            matches = exact_matches
         st.caption(f'{len(matches)}チャンピオンが一致')
         if not matches:
             st.warning('一致するチャンピオンがありません。')
         for champ in matches:
             with st.expander(champ['name'], expanded=len(matches)==1):
+                checklist = json.loads(champ['checklist_json'])
+                for i, item in enumerate(checklist, 1):
+                    st.markdown(f'**{i}. {item}**')
+                supplements = json.loads(champ['supplements_json'])
+                if supplements:
+                    st.markdown('**追加の対策**')
+                    for item in supplements:
+                        st.markdown(f"- {item['detail']}")
                 tips = search_tips(conn, champ['id'])
                 if not tips:
                     st.info('対策はまだ登録されていません。')
-                for tip in tips:
-                    st.markdown(f"**{tip['category']}** — {tip['detail']}")
+                if tips:
+                    with st.popover('詳しい立ち回り・補足'):
+                        for tip in tips:
+                            st.markdown(f"**{tip['category']}** — {tip['detail']}")
 
 with review_tab:
     if not champions:
@@ -156,6 +169,8 @@ with review_tab:
         export_data = {'video_url':VIDEO_URL, 'champions':[]}
         for champ in champions:
             item = dict(champ)
+            item['checklist'] = json.loads(item.pop('checklist_json'))
+            item['supplements'] = json.loads(item.pop('supplements_json'))
             item['tips'] = [dict(r) for r in conn.execute('SELECT * FROM tips WHERE champion_id=? ORDER BY id', (champ['id'],))]
             export_data['champions'].append(item)
         st.download_button('JSON形式でエクスポート', json.dumps(export_data, ensure_ascii=False, indent=2), file_name='lol_top_counters.json', mime='application/json')

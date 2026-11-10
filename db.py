@@ -38,6 +38,11 @@ def connect(path=DB):
     if 'origin' not in columns:
         conn.execute("ALTER TABLE tips ADD COLUMN origin TEXT NOT NULL DEFAULT 'manual'")
         conn.commit()
+    champion_columns = {r['name'] for r in conn.execute('PRAGMA table_info(champions)')}
+    for column in ['checklist_json', 'supplements_json']:
+        if column not in champion_columns:
+            conn.execute(f"ALTER TABLE champions ADD COLUMN {column} TEXT NOT NULL DEFAULT '[]'")
+    conn.commit()
     return conn
 
 
@@ -175,6 +180,16 @@ def restore_backup(conn, data):
         start, end = champ.get('start_sec'), champ.get('end_sec')
         if not valid_sec(start) or (end is not None and (not valid_sec(end) or end <= start)):
             raise ValueError('チャプターの時刻が不正です。')
+        checklist = champ.get('checklist', [])
+        if not isinstance(checklist, list) or (checklist and len(checklist) != 5) or any(not isinstance(item, str) or not item.strip() for item in checklist):
+            raise ValueError('チェックリストは5件の文字列で指定してください。')
+        supplements = champ.get('supplements', [])
+        if not isinstance(supplements, list):
+            raise ValueError('補足は配列で指定してください。')
+        for item in supplements:
+            if not isinstance(item, dict) or not isinstance(item.get('detail'), str) or not item['detail'].strip() or not valid_sec(item.get('source_sec')):
+                raise ValueError('補足の形式が不正です。')
+            validate_source(item['source_sec'], champ)
         tips = champ.get('tips', [])
         if not isinstance(tips, list):
             raise ValueError('tips は配列で指定してください。')
@@ -199,6 +214,12 @@ def restore_backup(conn, data):
             conn.execute('INSERT OR IGNORE INTO champions(name,start_sec,end_sec) VALUES(?,?,?)',
                          (champ['name'], champ['start_sec'], champ.get('end_sec')))
             current = conn.execute('SELECT * FROM champions WHERE name=?', (champ['name'],)).fetchone()
+            for item in champ.get('supplements', []):
+                validate_source(item['source_sec'], current)
+            for field in ['checklist', 'supplements']:
+                if champ.get(field) and current[f'{field}_json'] == '[]':
+                    conn.execute(f'UPDATE champions SET {field}_json=? WHERE id=?',
+                                 (json.dumps(champ[field], ensure_ascii=False), current['id']))
             for tip in champ.get('tips', []):
                 if tip['status'] == '確認済み' or tip.get('origin') == 'subtitle_summary':
                     validate_source(tip.get('source_sec'), current)
@@ -214,6 +235,7 @@ def restore_backup(conn, data):
 def install_dataset(conn):
     """Install the bundled source dataset once; preserve later edits and deletions."""
     if conn.execute("SELECT 1 FROM app_meta WHERE key='bundled_dataset_v1'").fetchone():
+        install_guides(conn)
         return
     data_dir = Path(__file__).with_name('data')
     backup = json.loads((data_dir / 'counters.json').read_text(encoding='utf-8'))
@@ -224,3 +246,21 @@ def install_dataset(conn):
     with conn:
         conn.executemany('INSERT OR IGNORE INTO transcript(start_sec,end_sec,content) VALUES(?,?,?)', rows)
         conn.execute("INSERT INTO app_meta(key,value) VALUES('bundled_dataset_v1','1')")
+    install_guides(conn)
+
+
+def install_guides(conn):
+    """Add frame-transcribed checklists without replacing users' existing tip edits."""
+    if conn.execute("SELECT 1 FROM app_meta WHERE key='bundled_guides_v2'").fetchone():
+        return
+    data = json.loads((Path(__file__).with_name('data') / 'counters.json').read_text(encoding='utf-8'))
+    with conn:
+        for champion in data['champions']:
+            current = conn.execute('SELECT * FROM champions WHERE name=?', (champion['name'],)).fetchone()
+            if current is None:
+                continue
+            for field in ['checklist', 'supplements']:
+                if champion.get(field) and current[f'{field}_json'] == '[]':
+                    conn.execute(f'UPDATE champions SET {field}_json=? WHERE id=?',
+                                 (json.dumps(champion[field], ensure_ascii=False), current['id']))
+        conn.execute("INSERT INTO app_meta(key,value) VALUES('bundled_guides_v2','1')")
