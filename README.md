@@ -1,5 +1,7 @@
 # LoL TOP対面対策DB
 
+公開サイト：**https://ota0425.github.io/lol-top-counter-db/**
+
 キショオタch「家族でイッキ見！バカでもわかる対策まとめ.top」の日本語自動字幕を基に、チャンピオン別の対策を検索するローカルWebアプリです。
 
 - 対象動画：https://www.youtube.com/watch?v=gmuF58MD3ts
