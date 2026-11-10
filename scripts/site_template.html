@@ -14,6 +14,9 @@
 
 .checklist{list-style:none;margin:0;padding:0 22px 10px;counter-reset:point}.checklist li{counter-increment:point;display:flex;align-items:baseline;gap:12px;padding:13px 0;border-top:1px solid var(--line);font-size:16px;font-weight:650;overflow-wrap:anywhere}.checklist li::before{content:counter(point);display:inline-flex;align-items:center;justify-content:center;flex:none;width:27px;height:27px;border-radius:50%;background:var(--soft);color:var(--accent);font-size:13px;font-weight:750}.additions{padding:2px 22px 18px}.additions h3{font-size:13px;color:var(--accent);margin:10px 0}.additions ul{margin:0;padding-left:20px}.additions li{font-size:14px;margin:10px 0;line-height:1.9;overflow-wrap:anywhere}.more{margin:0 22px 18px;background:#f9faff;border:1px solid var(--line);border-radius:8px}.counter .more>summary{font-size:13px;font-weight:500;padding:10px 13px;color:var(--muted)}.more .tips{padding:0 13px 4px}.more .tip{padding:12px 0}.more .tip p{font-size:14px}.counter>summary small{white-space:normal}
 @media(max-width:540px){.checklist{padding:0 16px 8px}.checklist li{font-size:15px;gap:10px}.additions{padding:2px 16px 14px}.more{margin:0 16px 16px}}
+
+.icon-text{min-width:0;flex:1}.icon-term{display:inline;white-space:normal}.game-icon{width:28px;height:28px;object-fit:contain;vertical-align:middle;display:inline-block;margin:0 5px 2px 1px;border-radius:5px;box-shadow:0 1px 4px #16243b22;background:#17243c}.icon-term[data-kind="rune"] .game-icon{border-radius:50%;background:#17243c}.tip .game-icon,.additions .game-icon{width:23px;height:23px;margin-right:4px}.icon-term:hover .game-icon{box-shadow:0 0 0 2px #245de044}
+@media(max-width:540px){.game-icon{width:25px;height:25px}}
 </style>
 </head>
 <body>
@@ -28,9 +31,11 @@
 <footer>LOL TOP COUNTER DB</footer>
 </main>
 <script id="counter-data" type="application/json">__COUNTER_DATA__</script>
+<script id="icon-data" type="application/json">__ICON_DATA__</script>
 <script>
 'use strict';
 const champions=JSON.parse(document.getElementById('counter-data').textContent);
+const iconCatalog=JSON.parse(document.getElementById('icon-data').textContent);
 const search=document.getElementById('search');
 const grid=document.getElementById('champion-grid');
 const results=document.getElementById('results');
@@ -39,6 +44,37 @@ const reset=document.getElementById('reset');
 const empty=document.getElementById('empty');
 function key(value){return value.normalize('NFKC').toLowerCase().replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60)).replace(/[\s・･.\-ー＝='’]/g,'');}
 function matches(value,champion){return [champion.name,...champion.aliases].some(alias=>key(alias).includes(key(value)));}
+function iconText(container,text,champion,includeSkills=false){
+ const terms={...iconCatalog.terms};
+ if(includeSkills){
+  const skills=iconCatalog.champions[champion.name]||{};
+  Object.assign(terms,skills);
+  for(const base of ['Q','W','E','R']){
+   if(skills[base])for(const phase of ['1','2','3'])terms[base+phase]=skills[base];
+  }
+ }
+ const names=Object.keys(terms).sort((a,b)=>b.length-a.length);
+ let plain='';
+ function flush(){if(plain){container.append(document.createTextNode(plain));plain='';}}
+ for(let index=0;index<text.length;){
+  const name=names.find(term=>{
+   if(!text.startsWith(term,index))return false;
+   if(/^(?:ULT|[QWER][123]?)$/.test(term)){
+    const before=text[index-1]||'';const after=text[index+term.length]||'';
+    if(/[A-Za-z]/.test(before)||/[A-Za-z]/.test(after))return false;
+   }
+   return true;
+  });
+  if(!name){plain+=text[index++];continue;}
+  flush();
+  const asset=terms[name];const span=document.createElement('span');span.className='icon-term';span.title=asset.label;
+  if(asset.src.includes('/rune-')||asset.src.includes('/stat-'))span.dataset.kind='rune';
+  const image=document.createElement('img');image.className='game-icon';image.src=asset.src;image.alt='';image.width=28;image.height=28;image.loading='lazy';image.decoding='async';
+  image.addEventListener('error',()=>image.remove(),{once:true});
+  span.append(image,document.createTextNode(name));container.append(span);index+=name.length;
+ }
+ flush();
+}
 function selectChampion(name){search.value=name;render();search.focus();updateURL();}
 function updateURL(){const url=new URL(location.href);if(search.value.trim())url.searchParams.set('champion',search.value.trim());else url.searchParams.delete('champion');history.replaceState(null,'',url);}
 function render(){
@@ -62,13 +98,13 @@ function render(){
    const count=document.createElement('small');count.textContent=`${champion.checklist.length}項目${champion.supplements.length?' ＋ 追加の対策':''}`;
    summary.append(count);details.append(summary);
    const checklist=document.createElement('ol');checklist.className='checklist';
-   for(const text of champion.checklist){const item=document.createElement('li');item.textContent=text;checklist.append(item);}
+   for(const text of champion.checklist){const item=document.createElement('li');const content=document.createElement('span');content.className='icon-text';iconText(content,text,champion,true);item.append(content);checklist.append(item);}
    details.append(checklist);
    if(champion.supplements.length){
     const additions=document.createElement('section');additions.className='additions';
     const heading=document.createElement('h3');heading.textContent='追加の対策';additions.append(heading);
     const list=document.createElement('ul');
-    for(const text of champion.supplements){const item=document.createElement('li');item.textContent=text;list.append(item);}
+    for(const text of champion.supplements){const item=document.createElement('li');iconText(item,text,champion);list.append(item);}
     additions.append(list);details.append(additions);
    }
    if(champion.tips.length){
@@ -78,7 +114,7 @@ function render(){
     for(const tip of champion.tips){
      const block=document.createElement('div');block.className='tip';
      const label=document.createElement('span');label.className='category';label.textContent=tip.category;
-     const body=document.createElement('p');body.textContent=tip.detail;block.append(label,body);tips.append(block);
+     const body=document.createElement('p');iconText(body,tip.detail,champion);block.append(label,body);tips.append(block);
     }
     more.append(tips);details.append(more);
    }

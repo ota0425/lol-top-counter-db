@@ -34,7 +34,9 @@ def build(database=None):
                        'supplements': [s['detail'] for s in champ.get('supplements', [])], 'tips': tips})
     payload = json.dumps(public, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     template = (ROOT / 'scripts/site_template.html').read_text(encoding='utf-8')
-    (ROOT / 'docs/index.html').write_text(template.replace('__COUNTER_DATA__', payload), encoding='utf-8')
+    icons = json.loads((ROOT / 'data/icons.json').read_text(encoding='utf-8'))
+    icon_payload = json.dumps(icons, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+    (ROOT / 'docs/index.html').write_text(template.replace('__COUNTER_DATA__', payload).replace('__ICON_DATA__', icon_payload), encoding='utf-8')
     (ROOT / 'docs/.nojekyll').touch()
     print(f"Built {len(public)} champions, {sum(len(c['checklist']) for c in public)} checklist items, "
           f"{sum(len(c['supplements']) for c in public)} additions, {sum(len(c['tips']) for c in public)} detailed notes")

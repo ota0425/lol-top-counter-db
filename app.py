@@ -1,7 +1,10 @@
 import json
+import html
 import sqlite3
 
 import streamlit as st
+
+from icons import icon_markup
 
 from db import (connect, VIDEO_URL, CATEGORIES, seconds, timestamp, video_link,
                 parse_captions, import_chapters, validate_source, restore_backup,
@@ -76,19 +79,19 @@ with search_tab:
             with st.expander(champ['name'], expanded=len(matches)==1):
                 checklist = json.loads(champ['checklist_json'])
                 for i, item in enumerate(checklist, 1):
-                    st.markdown(f'**{i}. {item}**')
+                    st.html(f'<div style="font-weight:650;padding:9px 0;line-height:1.9">{i}. {icon_markup(item, champ["name"], True)}</div>')
                 supplements = json.loads(champ['supplements_json'])
                 if supplements:
                     st.markdown('**追加の対策**')
                     for item in supplements:
-                        st.markdown(f"- {item['detail']}")
+                        st.html(f"<p>・{icon_markup(item['detail'], champ['name'])}</p>")
                 tips = search_tips(conn, champ['id'])
                 if not tips:
                     st.info('対策はまだ登録されていません。')
                 if tips:
                     with st.popover('詳しい立ち回り・補足'):
                         for tip in tips:
-                            st.markdown(f"**{tip['category']}** — {tip['detail']}")
+                            st.html(f"<p><strong>{html.escape(tip['category'])}</strong> — {icon_markup(tip['detail'], champ['name'])}</p>")
 
 with review_tab:
     if not champions:

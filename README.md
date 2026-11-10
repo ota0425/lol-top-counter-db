@@ -75,3 +75,11 @@ python3 scripts/build_site.py --database counters.sqlite3
 更新した `docs/index.html` をGitHubへ反映すると、GitHub Pagesが再公開します。公開設定は `main` ブランチの `/docs` です。公開ページは自動字幕やSQLiteのDBファイルを配信しません。
 
 まとめ画面と本文の装備アイコンが異なる箇所（ウディアの5項目目）は画面の表記を維持し、本文で説明されているスイフトネスブーツを補足しています。
+
+## アイコン
+
+スキル・パッシブ・サモナースペル・アイテム・ルーンは、[Riot公式Data Dragon](https://developer.riotgames.com/docs/lol#data-dragon)のアイコンを使っています。動画の時期に合わせてバージョン `15.17.1` に固定し、291画像を `docs/assets/icons/` に同梱しています。利用時にRiotのサーバーへ画像を取りに行く必要はありません。
+
+対応表は `data/icons.json`、取得用スクリプトは `scripts/sync_icons.py` です。取得し直す場合は `python3 scripts/sync_icons.py`、サイトの再生成は `python3 scripts/build_site.py` を実行します。
+
+チェックリスト内のスキル記号にはその対面チャンピオンのアイコンを表示します。他チャンピオンのスキルが登場する補足では、誤対応を避けるためスキル記号の自動置換を行いません。補足の装備・ルーン名にはアイコンを表示します。

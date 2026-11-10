@@ -1,0 +1,1476 @@
+{
+  "version": "15.17.1",
+  "source": "https://developer.riotgames.com/docs/lol#data-dragon",
+  "champions": {
+    "アーゴット": {
+      "Q": {
+        "src": "assets/icons/spell-UrgotQ.png",
+        "label": "Q：コラプトシェル"
+      },
+      "W": {
+        "src": "assets/icons/spell-UrgotW.png",
+        "label": "W：パージ"
+      },
+      "E": {
+        "src": "assets/icons/spell-UrgotE.png",
+        "label": "E：ディスデイン"
+      },
+      "R": {
+        "src": "assets/icons/spell-UrgotR.png",
+        "label": "R：デスグラインダー"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-UrgotR.png",
+        "label": "R：デスグラインダー"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Urgot_Passive.png",
+        "label": "パッシブ：エコーフレイム"
+      }
+    },
+    "アカリ": {
+      "Q": {
+        "src": "assets/icons/spell-AkaliQ.png",
+        "label": "Q：五連苦無"
+      },
+      "W": {
+        "src": "assets/icons/spell-AkaliW.png",
+        "label": "W：黄昏の帳"
+      },
+      "E": {
+        "src": "assets/icons/spell-AkaliE.png",
+        "label": "E：翻身手裏剣"
+      },
+      "R": {
+        "src": "assets/icons/spell-AkaliR.png",
+        "label": "R：完遂"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-AkaliR.png",
+        "label": "R：完遂"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Akali_P.png",
+        "label": "パッシブ：刺客の刻印"
+      }
+    },
+    "アンベッサ": {
+      "Q": {
+        "src": "assets/icons/spell-AmbessaQ.png",
+        "label": "Q：カニングスイープ / サンダリングスラム"
+      },
+      "W": {
+        "src": "assets/icons/spell-AmbessaW.png",
+        "label": "W：断交"
+      },
+      "E": {
+        "src": "assets/icons/spell-AmbessaE.png",
+        "label": "E：ラセレイト"
+      },
+      "R": {
+        "src": "assets/icons/spell-AmbessaR.png",
+        "label": "R：公開処刑"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-AmbessaR.png",
+        "label": "R：公開処刑"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Icon_Ambessa_Passive.Domina.png",
+        "label": "パッシブ：ドレイクハウンドの猛攻"
+      }
+    },
+    "イラオイ": {
+      "Q": {
+        "src": "assets/icons/spell-IllaoiQ.png",
+        "label": "Q：触手の鉄槌"
+      },
+      "W": {
+        "src": "assets/icons/spell-IllaoiW.png",
+        "label": "W：過酷なる教訓"
+      },
+      "E": {
+        "src": "assets/icons/spell-IllaoiE.png",
+        "label": "E：魂の試練"
+      },
+      "R": {
+        "src": "assets/icons/spell-IllaoiR.png",
+        "label": "R：信仰震"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-IllaoiR.png",
+        "label": "R：信仰震"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Illaoi_P.png",
+        "label": "パッシブ：旧神の預言者"
+      }
+    },
+    "ヴェイン": {
+      "Q": {
+        "src": "assets/icons/spell-VayneTumble.png",
+        "label": "Q：タンブル"
+      },
+      "W": {
+        "src": "assets/icons/spell-VayneSilveredBolts.png",
+        "label": "W：シルバーボルト"
+      },
+      "E": {
+        "src": "assets/icons/spell-VayneCondemn.png",
+        "label": "E：パニッシュメント"
+      },
+      "R": {
+        "src": "assets/icons/spell-VayneInquisition.png",
+        "label": "R：ファイナルアワー"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-VayneInquisition.png",
+        "label": "R：ファイナルアワー"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Vayne_NightHunter.png",
+        "label": "パッシブ：ナイトハンター"
+      }
+    },
+    "ウディア": {
+      "Q": {
+        "src": "assets/icons/spell-UdyrQ.png",
+        "label": "Q：野性の爪"
+      },
+      "W": {
+        "src": "assets/icons/spell-UdyrW.png",
+        "label": "W：鉄の外皮"
+      },
+      "E": {
+        "src": "assets/icons/spell-UdyrE.png",
+        "label": "E：焔の猛進"
+      },
+      "R": {
+        "src": "assets/icons/spell-UdyrR.png",
+        "label": "R：氷翼の嵐"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-UdyrR.png",
+        "label": "R：氷翼の嵐"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Udyr_P.png",
+        "label": "パッシブ：精霊の繋ぎ手"
+      }
+    },
+    "エイトロックス": {
+      "Q": {
+        "src": "assets/icons/spell-AatroxQ.png",
+        "label": "Q：ダーキンブレード"
+      },
+      "W": {
+        "src": "assets/icons/spell-AatroxW.png",
+        "label": "W：炎獄の鎖"
+      },
+      "E": {
+        "src": "assets/icons/spell-AatroxE.png",
+        "label": "E：影進撃"
+      },
+      "R": {
+        "src": "assets/icons/spell-AatroxR.png",
+        "label": "R：ワールドエンダー"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-AatroxR.png",
+        "label": "R：ワールドエンダー"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Aatrox_Passive.png",
+        "label": "パッシブ：死兆の構え"
+      }
+    },
+    "オーン": {
+      "Q": {
+        "src": "assets/icons/spell-OrnnQ.png",
+        "label": "Q：溶岩隆起"
+      },
+      "W": {
+        "src": "assets/icons/spell-OrnnW.png",
+        "label": "W：ふいごの息"
+      },
+      "E": {
+        "src": "assets/icons/spell-OrnnE.png",
+        "label": "E：灼熱の突撃"
+      },
+      "R": {
+        "src": "assets/icons/spell-OrnnR.png",
+        "label": "R：鍛冶神の呼び声"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-OrnnR.png",
+        "label": "R：鍛冶神の呼び声"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-OrnnP.png",
+        "label": "パッシブ：歩く鍛冶場"
+      }
+    },
+    "オラフ": {
+      "Q": {
+        "src": "assets/icons/spell-OlafAxeThrowCast.png",
+        "label": "Q：斧投げ"
+      },
+      "W": {
+        "src": "assets/icons/spell-OlafFrenziedStrikes.png",
+        "label": "W：根性比べ"
+      },
+      "E": {
+        "src": "assets/icons/spell-OlafRecklessStrike.png",
+        "label": "E：捨て身切り"
+      },
+      "R": {
+        "src": "assets/icons/spell-OlafRagnarok.png",
+        "label": "R：ラグナロク"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-OlafRagnarok.png",
+        "label": "R：ラグナロク"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Olaf_Passive.png",
+        "label": "パッシブ：狂戦士の怒り"
+      }
+    },
+    "カサンテ": {
+      "Q": {
+        "src": "assets/icons/spell-KSanteQ.png",
+        "label": "Q：破撃のエントーフォ"
+      },
+      "W": {
+        "src": "assets/icons/spell-KSanteW.png",
+        "label": "W：切り開く猛進"
+      },
+      "E": {
+        "src": "assets/icons/spell-KSanteE.png",
+        "label": "E：辰砂の足取り"
+      },
+      "R": {
+        "src": "assets/icons/spell-KSanteR.png",
+        "label": "R：オールアウト"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-KSanteR.png",
+        "label": "R：オールアウト"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Icons_KSante_P.png",
+        "label": "パッシブ：不屈の本能"
+      }
+    },
+    "カミール": {
+      "Q": {
+        "src": "assets/icons/spell-CamilleQ.png",
+        "label": "Q：プレシジョンプロトコル"
+      },
+      "W": {
+        "src": "assets/icons/spell-CamilleW.png",
+        "label": "W：タクティカルスイープ"
+      },
+      "E": {
+        "src": "assets/icons/spell-CamilleE.png",
+        "label": "E：フックショット"
+      },
+      "R": {
+        "src": "assets/icons/spell-CamilleR.png",
+        "label": "R：ヘクステック・アルティメイタム"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-CamilleR.png",
+        "label": "R：ヘクステック・アルティメイタム"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Camille_Passive.png",
+        "label": "パッシブ：アダプティブディフェンス"
+      }
+    },
+    "ガレン": {
+      "Q": {
+        "src": "assets/icons/spell-GarenQ.png",
+        "label": "Q：断固たる一撃"
+      },
+      "W": {
+        "src": "assets/icons/spell-GarenW.png",
+        "label": "W：勇気の護り"
+      },
+      "E": {
+        "src": "assets/icons/spell-GarenE.png",
+        "label": "E：ジャッジメント"
+      },
+      "R": {
+        "src": "assets/icons/spell-GarenR.png",
+        "label": "R：デマーシアの正義"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-GarenR.png",
+        "label": "R：デマーシアの正義"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Garen_Passive.png",
+        "label": "パッシブ：タフガイ"
+      }
+    },
+    "ガングプランク": {
+      "Q": {
+        "src": "assets/icons/spell-GangplankQWrapper.png",
+        "label": "Q：偽りの発砲"
+      },
+      "W": {
+        "src": "assets/icons/spell-GangplankW.png",
+        "label": "W：壊血病治癒"
+      },
+      "E": {
+        "src": "assets/icons/spell-GangplankE.png",
+        "label": "E：火薬樽"
+      },
+      "R": {
+        "src": "assets/icons/spell-GangplankR.png",
+        "label": "R：一斉砲撃"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-GangplankR.png",
+        "label": "R：一斉砲撃"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Gangplank_Passive.png",
+        "label": "パッシブ：背水の銃剣"
+      }
+    },
+    "クイン": {
+      "Q": {
+        "src": "assets/icons/spell-QuinnQ.png",
+        "label": "Q：暗闇の強襲"
+      },
+      "W": {
+        "src": "assets/icons/spell-QuinnW.png",
+        "label": "W：鷲の眼"
+      },
+      "E": {
+        "src": "assets/icons/spell-QuinnE.png",
+        "label": "E：飛翔撃"
+      },
+      "R": {
+        "src": "assets/icons/spell-QuinnR.png",
+        "label": "R：相棒"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-QuinnR.png",
+        "label": "R：相棒"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Quinn_Passive.png",
+        "label": "パッシブ：鷲匠"
+      }
+    },
+    "グウェン": {
+      "Q": {
+        "src": "assets/icons/spell-GwenQ.png",
+        "label": "Q：チョキチョキッ！"
+      },
+      "W": {
+        "src": "assets/icons/spell-GwenW.png",
+        "label": "W：聖なる霧"
+      },
+      "E": {
+        "src": "assets/icons/spell-GwenE.png",
+        "label": "E：スキップスラッシュ"
+      },
+      "R": {
+        "src": "assets/icons/spell-GwenR.png",
+        "label": "R：針仕事"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-GwenR.png",
+        "label": "R：針仕事"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Gwen_Passive.png",
+        "label": "パッシブ：裁断"
+      }
+    },
+    "クレッド": {
+      "Q": {
+        "src": "assets/icons/spell-KledQ.png",
+        "label": "Q：トラバサミロープ"
+      },
+      "W": {
+        "src": "assets/icons/spell-KledW.png",
+        "label": "W：狂暴の宴"
+      },
+      "E": {
+        "src": "assets/icons/spell-KledE.png",
+        "label": "E：ジャウスト"
+      },
+      "R": {
+        "src": "assets/icons/spell-KledR.png",
+        "label": "R：チャァァァァァァァジ！！！"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-KledR.png",
+        "label": "R：チャァァァァァァァジ！！！"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Kled_P.png",
+        "label": "パッシブ：弱虫トカゲ「スカール」"
+      }
+    },
+    "ケイル": {
+      "Q": {
+        "src": "assets/icons/spell-KayleQ.png",
+        "label": "Q：裁きの射光"
+      },
+      "W": {
+        "src": "assets/icons/spell-KayleW.png",
+        "label": "W：天の祝福"
+      },
+      "E": {
+        "src": "assets/icons/spell-KayleE.png",
+        "label": "E：星炎の刃"
+      },
+      "R": {
+        "src": "assets/icons/spell-KayleR.png",
+        "label": "R：聖なる審判"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-KayleR.png",
+        "label": "R：聖なる審判"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Kayle_P.png",
+        "label": "パッシブ：聖なる上昇"
+      }
+    },
+    "ケネン": {
+      "Q": {
+        "src": "assets/icons/spell-KennenShurikenHurlMissile1.png",
+        "label": "Q：雷遁手裏剣"
+      },
+      "W": {
+        "src": "assets/icons/spell-KennenBringTheLight.png",
+        "label": "W：稲妻の奔流"
+      },
+      "E": {
+        "src": "assets/icons/spell-KennenLightningRush.png",
+        "label": "E：疾風迅雷"
+      },
+      "R": {
+        "src": "assets/icons/spell-KennenShurikenStorm.png",
+        "label": "R：雷撃の大嵐"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-KennenShurikenStorm.png",
+        "label": "R：雷撃の大嵐"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Kennen_Passive.png",
+        "label": "パッシブ：嵐の刻印"
+      }
+    },
+    "サイオン": {
+      "Q": {
+        "src": "assets/icons/spell-SionQ.png",
+        "label": "Q：破滅の斧"
+      },
+      "W": {
+        "src": "assets/icons/spell-SionW.png",
+        "label": "W：魂の炉心"
+      },
+      "E": {
+        "src": "assets/icons/spell-SionE.png",
+        "label": "E：殺意の雄叫び"
+      },
+      "R": {
+        "src": "assets/icons/spell-SionR.png",
+        "label": "R：猪突猛進"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-SionR.png",
+        "label": "R：猪突猛進"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Sion_Passive1.png",
+        "label": "パッシブ：名誉ある死"
+      }
+    },
+    "ザック": {
+      "Q": {
+        "src": "assets/icons/spell-ZacQ.png",
+        "label": "Q：スライムパンチ"
+      },
+      "W": {
+        "src": "assets/icons/spell-ZacW.png",
+        "label": "W：スライムクラッシュ"
+      },
+      "E": {
+        "src": "assets/icons/spell-ZacE.png",
+        "label": "E：ブッ飛びスライム"
+      },
+      "R": {
+        "src": "assets/icons/spell-ZacR.png",
+        "label": "R：レッツバウンス！"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-ZacR.png",
+        "label": "R：レッツバウンス！"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-ZacPassive.png",
+        "label": "パッシブ：はぐれスライム"
+      }
+    },
+    "ジェイス": {
+      "Q": {
+        "src": "assets/icons/spell-JayceToTheSkies.png",
+        "label": "Q：スカイバスター/ショックブラスト"
+      },
+      "W": {
+        "src": "assets/icons/spell-JayceStaticField.png",
+        "label": "W：ライトニング/ハイパーチャージ"
+      },
+      "E": {
+        "src": "assets/icons/spell-JayceThunderingBlow.png",
+        "label": "E：サンダーブロー/アクセルゲート"
+      },
+      "R": {
+        "src": "assets/icons/spell-JayceStanceHtG.png",
+        "label": "R：マーキュリーキャノン/マーキュリーハンマー"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-JayceStanceHtG.png",
+        "label": "R：マーキュリーキャノン/マーキュリーハンマー"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Jayce_Passive.png",
+        "label": "パッシブ：ヘクステック・コンデンサー"
+      }
+    },
+    "シェン": {
+      "Q": {
+        "src": "assets/icons/spell-ShenQ.png",
+        "label": "Q：護刃招来"
+      },
+      "W": {
+        "src": "assets/icons/spell-ShenW.png",
+        "label": "W：防人の帳"
+      },
+      "E": {
+        "src": "assets/icons/spell-ShenE.png",
+        "label": "E：殺気駆け"
+      },
+      "R": {
+        "src": "assets/icons/spell-ShenR.png",
+        "label": "R：瞬身護法"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-ShenR.png",
+        "label": "R：瞬身護法"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Shen_Passive.png",
+        "label": "パッシブ：内気功"
+      }
+    },
+    "ジャックス": {
+      "Q": {
+        "src": "assets/icons/spell-JaxQ.png",
+        "label": "Q：リープストライク"
+      },
+      "W": {
+        "src": "assets/icons/spell-JaxW.png",
+        "label": "W：パワーバッシュ"
+      },
+      "E": {
+        "src": "assets/icons/spell-JaxE.png",
+        "label": "E：カウンターストライク"
+      },
+      "R": {
+        "src": "assets/icons/spell-JaxR.png",
+        "label": "R：ウェポングランドマスター"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-JaxR.png",
+        "label": "R：ウェポングランドマスター"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Armsmaster_MasterOfArms.png",
+        "label": "パッシブ：アサルトアタック"
+      }
+    },
+    "シンジド": {
+      "Q": {
+        "src": "assets/icons/spell-PoisonTrail.png",
+        "label": "Q：毒の軌跡"
+      },
+      "W": {
+        "src": "assets/icons/spell-MegaAdhesive.png",
+        "label": "W：強力粘着剤"
+      },
+      "E": {
+        "src": "assets/icons/spell-Fling.png",
+        "label": "E：すくい投げ"
+      },
+      "R": {
+        "src": "assets/icons/spell-InsanityPotion.png",
+        "label": "R：狂人のポーション"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-InsanityPotion.png",
+        "label": "R：狂人のポーション"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Singed_Passive.png",
+        "label": "パッシブ：スリップストリーム"
+      }
+    },
+    "スカーナー": {
+      "Q": {
+        "src": "assets/icons/spell-SkarnerQ.png",
+        "label": "Q：砕けし大地 / 大地の怒り"
+      },
+      "W": {
+        "src": "assets/icons/spell-SkarnerW.png",
+        "label": "W：激震の砦"
+      },
+      "E": {
+        "src": "assets/icons/spell-SkarnerE.png",
+        "label": "E：イシュタルの衝動"
+      },
+      "R": {
+        "src": "assets/icons/spell-SkarnerR.png",
+        "label": "R：インペイル"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-SkarnerR.png",
+        "label": "R：インペイル"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Skarner_Passive.png",
+        "label": "パッシブ：響振動"
+      }
+    },
+    "セト": {
+      "Q": {
+        "src": "assets/icons/spell-SettQ.png",
+        "label": "Q：ナックルダウン"
+      },
+      "W": {
+        "src": "assets/icons/spell-SettW.png",
+        "label": "W：ヘイメイカー"
+      },
+      "E": {
+        "src": "assets/icons/spell-SettE.png",
+        "label": "E：フェイスブレイカー"
+      },
+      "R": {
+        "src": "assets/icons/spell-SettR.png",
+        "label": "R：ショーストッパー"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-SettR.png",
+        "label": "R：ショーストッパー"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Sett_P.png",
+        "label": "パッシブ：ファイティングスピリット"
+      }
+    },
+    "ダリウス": {
+      "Q": {
+        "src": "assets/icons/spell-DariusCleave.png",
+        "label": "Q：皆殺しの斧"
+      },
+      "W": {
+        "src": "assets/icons/spell-DariusNoxianTacticsONH.png",
+        "label": "W：脚削ぎ"
+      },
+      "E": {
+        "src": "assets/icons/spell-DariusAxeGrabCone.png",
+        "label": "E：捕縛"
+      },
+      "R": {
+        "src": "assets/icons/spell-DariusExecute.png",
+        "label": "R：ノクサスギロチン"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-DariusExecute.png",
+        "label": "R：ノクサスギロチン"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Darius_Icon_Hemorrhage.png",
+        "label": "パッシブ：大出血"
+      }
+    },
+    "チョガス": {
+      "Q": {
+        "src": "assets/icons/spell-Rupture.png",
+        "label": "Q：ラプチャー"
+      },
+      "W": {
+        "src": "assets/icons/spell-FeralScream.png",
+        "label": "W：スクリーム"
+      },
+      "E": {
+        "src": "assets/icons/spell-VorpalSpikes.png",
+        "label": "E：ヴォーパルスパイク"
+      },
+      "R": {
+        "src": "assets/icons/spell-Feast.png",
+        "label": "R：捕食"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-Feast.png",
+        "label": "R：捕食"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-GreenTerror_TailSpike.png",
+        "label": "パッシブ：暴食"
+      }
+    },
+    "ティーモ": {
+      "Q": {
+        "src": "assets/icons/spell-TeemoQ.png",
+        "label": "Q：目つぶしダーツ"
+      },
+      "W": {
+        "src": "assets/icons/spell-TeemoW.png",
+        "label": "W：駆け足！"
+      },
+      "E": {
+        "src": "assets/icons/spell-TeemoE.png",
+        "label": "E：毒たっぷり吹き矢"
+      },
+      "R": {
+        "src": "assets/icons/spell-TeemoR.png",
+        "label": "R：毒キノコ"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-TeemoR.png",
+        "label": "R：毒キノコ"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-TeemoPassive.ASU_Teemo.png",
+        "label": "パッシブ：やぶからヨードル"
+      }
+    },
+    "トランドル": {
+      "Q": {
+        "src": "assets/icons/spell-TrundleTrollSmash.png",
+        "label": "Q：咬み付き"
+      },
+      "W": {
+        "src": "assets/icons/spell-trundledesecrate.png",
+        "label": "W：凍てつく大地"
+      },
+      "E": {
+        "src": "assets/icons/spell-TrundleCircle.png",
+        "label": "E：氷冷の柱"
+      },
+      "R": {
+        "src": "assets/icons/spell-TrundlePain.png",
+        "label": "R：暴虐なる搾取"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-TrundlePain.png",
+        "label": "R：暴虐なる搾取"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Trundle_Passive.png",
+        "label": "パッシブ：王への貢物"
+      }
+    },
+    "トリンダメア": {
+      "Q": {
+        "src": "assets/icons/spell-TryndamereQ.png",
+        "label": "Q：血の欲望"
+      },
+      "W": {
+        "src": "assets/icons/spell-TryndamereW.png",
+        "label": "W：嘲りの叫び"
+      },
+      "E": {
+        "src": "assets/icons/spell-TryndamereE.png",
+        "label": "E：スピンスラッシュ"
+      },
+      "R": {
+        "src": "assets/icons/spell-UndyingRage.png",
+        "label": "R：不死の憤激"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-UndyingRage.png",
+        "label": "R：不死の憤激"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Tryndamere_Passive.png",
+        "label": "パッシブ：戦場の咆哮"
+      }
+    },
+    "ナー": {
+      "Q": {
+        "src": "assets/icons/spell-GnarQ.png",
+        "label": "Q：ブーメラン/ぽいっ"
+      },
+      "W": {
+        "src": "assets/icons/spell-GnarW.png",
+        "label": "W：ごきげん/こてんぱん"
+      },
+      "E": {
+        "src": "assets/icons/spell-GnarE.png",
+        "label": "E：ぴょんぴょん/ドーン！"
+      },
+      "R": {
+        "src": "assets/icons/spell-GnarR.png",
+        "label": "R：ナー！"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-GnarR.png",
+        "label": "R：ナー！"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Gnar_Passive.png",
+        "label": "パッシブ：ぷんすこ"
+      }
+    },
+    "ナサス": {
+      "Q": {
+        "src": "assets/icons/spell-NasusQ.png",
+        "label": "Q：サイフォンストライク"
+      },
+      "W": {
+        "src": "assets/icons/spell-NasusW.png",
+        "label": "W：ウィザー"
+      },
+      "E": {
+        "src": "assets/icons/spell-NasusE.png",
+        "label": "E：スピリットファイア"
+      },
+      "R": {
+        "src": "assets/icons/spell-NasusR.png",
+        "label": "R：アヌビスの怒り"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-NasusR.png",
+        "label": "R：アヌビスの怒り"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Nasus_Passive.png",
+        "label": "パッシブ：ソウルイーター"
+      }
+    },
+    "パンテオン": {
+      "Q": {
+        "src": "assets/icons/spell-PantheonQ.png",
+        "label": "Q：彗星の槍"
+      },
+      "W": {
+        "src": "assets/icons/spell-PantheonW.png",
+        "label": "W：跳撃の盾"
+      },
+      "E": {
+        "src": "assets/icons/spell-PantheonE.png",
+        "label": "E：イージスの猛攻"
+      },
+      "R": {
+        "src": "assets/icons/spell-PantheonR.png",
+        "label": "R：偉大なる星路"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-PantheonR.png",
+        "label": "R：偉大なる星路"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Pantheon_Passive.png",
+        "label": "パッシブ：定命の意志"
+      }
+    },
+    "フィオラ": {
+      "Q": {
+        "src": "assets/icons/spell-FioraQ.png",
+        "label": "Q：ファント"
+      },
+      "W": {
+        "src": "assets/icons/spell-FioraW.png",
+        "label": "W：リポスト"
+      },
+      "E": {
+        "src": "assets/icons/spell-FioraE.png",
+        "label": "E：ブレードワーク"
+      },
+      "R": {
+        "src": "assets/icons/spell-FioraR.png",
+        "label": "R：グランドチャレンジ"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-FioraR.png",
+        "label": "R：グランドチャレンジ"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Fiora_P.png",
+        "label": "パッシブ：デュエリスト・ダンス"
+      }
+    },
+    "ブラッドミア": {
+      "Q": {
+        "src": "assets/icons/spell-VladimirQ.png",
+        "label": "Q：吸血"
+      },
+      "W": {
+        "src": "assets/icons/spell-VladimirSanguinePool.png",
+        "label": "W：紅血の沼"
+      },
+      "E": {
+        "src": "assets/icons/spell-VladimirE.png",
+        "label": "E：血液奔流"
+      },
+      "R": {
+        "src": "assets/icons/spell-VladimirHemoplague.png",
+        "label": "R：呪血の渦"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-VladimirHemoplague.png",
+        "label": "R：呪血の渦"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-VladimirP.png",
+        "label": "パッシブ：真紅の盟約"
+      }
+    },
+    "ポッピー": {
+      "Q": {
+        "src": "assets/icons/spell-PoppyQ.png",
+        "label": "Q：ハンマーショック"
+      },
+      "W": {
+        "src": "assets/icons/spell-PoppyW.png",
+        "label": "W：ステッドファスト"
+      },
+      "E": {
+        "src": "assets/icons/spell-PoppyE.png",
+        "label": "E：ヒロイックチャージ"
+      },
+      "R": {
+        "src": "assets/icons/spell-PoppyR.png",
+        "label": "R：守護者の鉄鎚"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-PoppyR.png",
+        "label": "R：守護者の鉄鎚"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Poppy_Passive.png",
+        "label": "パッシブ：鋼鉄の大使"
+      }
+    },
+    "ボリベア": {
+      "Q": {
+        "src": "assets/icons/spell-VolibearQ.png",
+        "label": "Q：稲妻の猛攻"
+      },
+      "W": {
+        "src": "assets/icons/spell-VolibearW.png",
+        "label": "W：激昂の斬撃"
+      },
+      "E": {
+        "src": "assets/icons/spell-VolibearE.png",
+        "label": "E：天破の一撃"
+      },
+      "R": {
+        "src": "assets/icons/spell-VolibearR.png",
+        "label": "R：嵐を起こす者"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-VolibearR.png",
+        "label": "R：嵐を起こす者"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Volibear_Icon_P.png",
+        "label": "パッシブ：無慈悲の嵐"
+      }
+    },
+    "マルファイト": {
+      "Q": {
+        "src": "assets/icons/spell-SeismicShard.png",
+        "label": "Q：サイズミックシャード"
+      },
+      "W": {
+        "src": "assets/icons/spell-Obduracy.png",
+        "label": "W：サンダークラップ"
+      },
+      "E": {
+        "src": "assets/icons/spell-Landslide.png",
+        "label": "E：グラウンドスラム"
+      },
+      "R": {
+        "src": "assets/icons/spell-UFSlash.png",
+        "label": "R：アンストッパブル・フォース"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-UFSlash.png",
+        "label": "R：アンストッパブル・フォース"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Malphite_GraniteShield.png",
+        "label": "パッシブ：グラナイトシールド"
+      }
+    },
+    "ムンド": {
+      "Q": {
+        "src": "assets/icons/spell-DrMundoQ.png",
+        "label": "Q：骨切りノコギリ"
+      },
+      "W": {
+        "src": "assets/icons/spell-DrMundoW.png",
+        "label": "W：心臓ビリビリ"
+      },
+      "E": {
+        "src": "assets/icons/spell-DrMundoE.png",
+        "label": "E：野蛮な痛み"
+      },
+      "R": {
+        "src": "assets/icons/spell-DrMundoR.png",
+        "label": "R：マキシマム投与"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-DrMundoR.png",
+        "label": "R：マキシマム投与"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-DrMundo_P.png",
+        "label": "パッシブ：気ままな往診"
+      }
+    },
+    "モルデカイザー": {
+      "Q": {
+        "src": "assets/icons/spell-MordekaiserQ.png",
+        "label": "Q：滅魂の一撃"
+      },
+      "W": {
+        "src": "assets/icons/spell-MordekaiserW.png",
+        "label": "W：不滅の鎧"
+      },
+      "E": {
+        "src": "assets/icons/spell-MordekaiserE.png",
+        "label": "E：死の呪縛"
+      },
+      "R": {
+        "src": "assets/icons/spell-MordekaiserR.png",
+        "label": "R：死の国"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-MordekaiserR.png",
+        "label": "R：死の国"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-MordekaiserPassive.png",
+        "label": "パッシブ：無窮の闇"
+      }
+    },
+    "ヤスオ": {
+      "Q": {
+        "src": "assets/icons/spell-YasuoQ1Wrapper.png",
+        "label": "Q：抜刀"
+      },
+      "W": {
+        "src": "assets/icons/spell-YasuoW.png",
+        "label": "W：風殺の壁"
+      },
+      "E": {
+        "src": "assets/icons/spell-YasuoE.png",
+        "label": "E：風薙ぎ"
+      },
+      "R": {
+        "src": "assets/icons/spell-YasuoR.png",
+        "label": "R：鬼哭啾々"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-YasuoR.png",
+        "label": "R：鬼哭啾々"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Yasuo_Passive.png",
+        "label": "パッシブ：浪人道"
+      }
+    },
+    "ヨネ": {
+      "Q": {
+        "src": "assets/icons/spell-YoneQ.png",
+        "label": "Q：斬命刀"
+      },
+      "W": {
+        "src": "assets/icons/spell-YoneW.png",
+        "label": "W：霊断刀"
+      },
+      "E": {
+        "src": "assets/icons/spell-YoneE.png",
+        "label": "E：縛魂の解放"
+      },
+      "R": {
+        "src": "assets/icons/spell-YoneR.png",
+        "label": "R：冥封一閃"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-YoneR.png",
+        "label": "R：冥封一閃"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-YonePassive.png",
+        "label": "パッシブ：狩鬼道"
+      }
+    },
+    "ヨリック": {
+      "Q": {
+        "src": "assets/icons/spell-YorickQ.png",
+        "label": "Q：葬送"
+      },
+      "W": {
+        "src": "assets/icons/spell-YorickW.png",
+        "label": "W：屍の列"
+      },
+      "E": {
+        "src": "assets/icons/spell-YorickE.png",
+        "label": "E：悲嘆の霧"
+      },
+      "R": {
+        "src": "assets/icons/spell-YorickR.png",
+        "label": "R：嘆きの墓標"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-YorickR.png",
+        "label": "R：嘆きの墓標"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Yorick_P.png",
+        "label": "パッシブ：魂の導き手"
+      }
+    },
+    "ランブル": {
+      "Q": {
+        "src": "assets/icons/spell-RumbleFlameThrower.png",
+        "label": "Q：スピットファイア"
+      },
+      "W": {
+        "src": "assets/icons/spell-RumbleShield.png",
+        "label": "W：ジャンクシールド"
+      },
+      "E": {
+        "src": "assets/icons/spell-RumbleGrenade.png",
+        "label": "E：エレクトロハープーン"
+      },
+      "R": {
+        "src": "assets/icons/spell-RumbleCarpetBomb.png",
+        "label": "R：イコライザー"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-RumbleCarpetBomb.png",
+        "label": "R：イコライザー"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Rumble_JunkyardTitan1.png",
+        "label": "パッシブ：ポンコツタイタン"
+      }
+    },
+    "リヴェン": {
+      "Q": {
+        "src": "assets/icons/spell-RivenTriCleave.png",
+        "label": "Q：折れた翼"
+      },
+      "W": {
+        "src": "assets/icons/spell-RivenMartyr.png",
+        "label": "W：気功破"
+      },
+      "E": {
+        "src": "assets/icons/spell-RivenFeint.png",
+        "label": "E：勇躍"
+      },
+      "R": {
+        "src": "assets/icons/spell-RivenFengShuiEngine.png",
+        "label": "R：追放者の剣"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-RivenFengShuiEngine.png",
+        "label": "R：追放者の剣"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-RivenRunicBlades.png",
+        "label": "パッシブ：ルーンブレード"
+      }
+    },
+    "リリア": {
+      "Q": {
+        "src": "assets/icons/spell-LilliaQ.png",
+        "label": "Q：花開く風"
+      },
+      "W": {
+        "src": "assets/icons/spell-LilliaW.png",
+        "label": "W：ひゃっ、あぶない！"
+      },
+      "E": {
+        "src": "assets/icons/spell-LilliaE.png",
+        "label": "E：コロコロの種"
+      },
+      "R": {
+        "src": "assets/icons/spell-LilliaR.png",
+        "label": "R：夢見の子守唄"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-LilliaR.png",
+        "label": "R：夢見の子守唄"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Lillia_Icon_Passive.png",
+        "label": "パッシブ：夢を集める大枝"
+      }
+    },
+    "レネクトン": {
+      "Q": {
+        "src": "assets/icons/spell-RenektonCleave.png",
+        "label": "Q：ミートカット"
+      },
+      "W": {
+        "src": "assets/icons/spell-RenektonPreExecute.png",
+        "label": "W：メッタ斬り"
+      },
+      "E": {
+        "src": "assets/icons/spell-RenektonSliceAndDice.png",
+        "label": "E：スライス・アンド・ダイス"
+      },
+      "R": {
+        "src": "assets/icons/spell-RenektonReignOfTheTyrant.png",
+        "label": "R：セベクの怒り"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-RenektonReignOfTheTyrant.png",
+        "label": "R：セベクの怒り"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Renekton_Passive.png",
+        "label": "パッシブ：激情の支配"
+      }
+    },
+    "レンガー": {
+      "Q": {
+        "src": "assets/icons/spell-RengarQ.png",
+        "label": "Q：逆上"
+      },
+      "W": {
+        "src": "assets/icons/spell-RengarW.png",
+        "label": "W：狩りの雄叫び"
+      },
+      "E": {
+        "src": "assets/icons/spell-RengarE.png",
+        "label": "E：鉄球の投げ縄"
+      },
+      "R": {
+        "src": "assets/icons/spell-RengarR.png",
+        "label": "R：狩猟本能"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-RengarR.png",
+        "label": "R：狩猟本能"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-Rengar_P.png",
+        "label": "パッシブ：見えざる襲撃者"
+      }
+    },
+    "ワーウィック": {
+      "Q": {
+        "src": "assets/icons/spell-WarwickQ.png",
+        "label": "Q：野獣の牙"
+      },
+      "W": {
+        "src": "assets/icons/spell-WarwickW.png",
+        "label": "W：血の追跡"
+      },
+      "E": {
+        "src": "assets/icons/spell-WarwickE.png",
+        "label": "E：怒りの咆哮"
+      },
+      "R": {
+        "src": "assets/icons/spell-WarwickR.png",
+        "label": "R：絶狼牙連撃"
+      },
+      "ULT": {
+        "src": "assets/icons/spell-WarwickR.png",
+        "label": "R：絶狼牙連撃"
+      },
+      "パッシブ": {
+        "src": "assets/icons/passive-WarwickP.png",
+        "label": "パッシブ：永遠の渇き"
+      }
+    }
+  },
+  "terms": {
+    "ブーツ": {
+      "src": "assets/icons/item-1001.png",
+      "label": "ブーツ"
+    },
+    "クロースアーマー": {
+      "src": "assets/icons/item-1029.png",
+      "label": "クロースアーマー"
+    },
+    "ドランシールド": {
+      "src": "assets/icons/item-1054.png",
+      "label": "ドランシールド"
+    },
+    "カル": {
+      "src": "assets/icons/item-1083.png",
+      "label": "カル"
+    },
+    "タワープレート": {
+      "src": "assets/icons/item-1515.png",
+      "label": "タワープレート"
+    },
+    "コントロールワード": {
+      "src": "assets/icons/item-2055.png",
+      "label": "コントロールワード"
+    },
+    "バーサーカーブーツ": {
+      "src": "assets/icons/item-3006.png",
+      "label": "バーサーカーブーツ"
+    },
+    "スイフトネスブーツ": {
+      "src": "assets/icons/item-3009.png",
+      "label": "スイフトネスブーツ"
+    },
+    "プレートスチールキャップ": {
+      "src": "assets/icons/item-3047.png",
+      "label": "プレートスチールキャップ"
+    },
+    "女神の涙": {
+      "src": "assets/icons/item-3070.png",
+      "label": "女神の涙"
+    },
+    "ブラッククリーバー": {
+      "src": "assets/icons/item-3071.png",
+      "label": "ブラッククリーバー"
+    },
+    "ブランブルベスト": {
+      "src": "assets/icons/item-3076.png",
+      "label": "ブランブルベスト"
+    },
+    "ワーデンメイル": {
+      "src": "assets/icons/item-3082.png",
+      "label": "ワーデンメイル"
+    },
+    "フローズンハート": {
+      "src": "assets/icons/item-3110.png",
+      "label": "フローズンハート"
+    },
+    "マーキュリーブーツ": {
+      "src": "assets/icons/item-3111.png",
+      "label": "マーキュリーブーツ"
+    },
+    "エクスキューショナーコーリング": {
+      "src": "assets/icons/item-3123.png",
+      "label": "エクスキューショナーコーリング"
+    },
+    "ルインドキングブレード": {
+      "src": "assets/icons/item-3153.png",
+      "label": "ルインドキングブレード"
+    },
+    "アイオニアブーツ": {
+      "src": "assets/icons/item-3158.png",
+      "label": "アイオニアブーツ"
+    },
+    "ハルブレイカー": {
+      "src": "assets/icons/item-3181.png",
+      "label": "ハルブレイカー"
+    },
+    "オラクルレンズ": {
+      "src": "assets/icons/item-3364.png",
+      "label": "オラクルレンズ"
+    },
+    "バミシンダー": {
+      "src": "assets/icons/item-6660.png",
+      "label": "バミシンダー"
+    },
+    "バリア": {
+      "src": "assets/icons/spell-SummonerBarrier.png",
+      "label": "バリア"
+    },
+    "フラッシュ": {
+      "src": "assets/icons/spell-SummonerFlash.png",
+      "label": "フラッシュ"
+    },
+    "イグナイト": {
+      "src": "assets/icons/spell-SummonerDot.png",
+      "label": "イグナイト"
+    },
+    "イグゾースト": {
+      "src": "assets/icons/spell-SummonerExhaust.png",
+      "label": "イグゾースト"
+    },
+    "ゴースト": {
+      "src": "assets/icons/spell-SummonerHaste.png",
+      "label": "ゴースト"
+    },
+    "テレポート": {
+      "src": "assets/icons/spell-SummonerTeleport.png",
+      "label": "テレポート"
+    },
+    "電撃": {
+      "src": "assets/icons/rune-Electrocute.png",
+      "label": "電撃"
+    },
+    "プレスアタック": {
+      "src": "assets/icons/rune-PressTheAttack.png",
+      "label": "プレスアタック"
+    },
+    "リーサルテンポ": {
+      "src": "assets/icons/rune-LethalTempoTemp.png",
+      "label": "リーサルテンポ"
+    },
+    "フリートフットワーク": {
+      "src": "assets/icons/rune-FleetFootwork.png",
+      "label": "フリートフットワーク"
+    },
+    "征服者": {
+      "src": "assets/icons/rune-Conqueror.png",
+      "label": "征服者"
+    },
+    "打ちこわし": {
+      "src": "assets/icons/rune-Demolish.png",
+      "label": "打ちこわし"
+    },
+    "息継ぎ": {
+      "src": "assets/icons/rune-SecondWind.png",
+      "label": "息継ぎ"
+    },
+    "ボーンアーマー": {
+      "src": "assets/icons/rune-BonePlating.png",
+      "label": "ボーンアーマー"
+    },
+    "秘儀の彗星": {
+      "src": "assets/icons/rune-ArcaneComet.png",
+      "label": "秘儀の彗星"
+    },
+    "フェイズラッシュ": {
+      "src": "assets/icons/rune-PhaseRush.png",
+      "label": "フェイズラッシュ"
+    },
+    "靴": {
+      "src": "assets/icons/item-1001.png",
+      "label": "ブーツ"
+    },
+    "サンファイアイージス": {
+      "src": "assets/icons/item-3068.png",
+      "label": "サンファイアイージス"
+    },
+    "サンファイア": {
+      "src": "assets/icons/item-3068.png",
+      "label": "サンファイアイージス"
+    },
+    "攻撃速度シャード": {
+      "src": "assets/icons/stat-StatModsAttackSpeedIcon.png",
+      "label": "攻撃速度シャード"
+    },
+    "魔法防御シャード": {
+      "src": "assets/icons/stat-StatModsMagicResIcon.png",
+      "label": "魔法防御シャード"
+    }
+  }
+}
