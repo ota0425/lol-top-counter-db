@@ -4,7 +4,7 @@ import json
 
 from db import (VIDEO_URL, connect, import_chapters, parse_captions,
                 restore_backup, search_key, seconds, install_dataset,
-                matches_champion, search_tips, validate_source)
+                matches_champion, search_tips, validate_source, video_link)
 
 
 class DatabaseTests(unittest.TestCase):
@@ -84,17 +84,17 @@ class DatabaseTests(unittest.TestCase):
     def test_bundled_data_has_all_champions_and_valid_sources(self):
         install_dataset(self.conn)
         champions = self.conn.execute('SELECT * FROM champions ORDER BY start_sec').fetchall()
-        self.assertEqual(len(champions), 50)
+        self.assertEqual(len(champions), 71)
         has_transcript = (Path(__file__).resolve().parents[1] / 'data/transcript.ja.json').exists()
-        self.assertEqual(self.conn.execute('SELECT COUNT(*) FROM transcript').fetchone()[0], 12377 if has_transcript else 0)
+        self.assertEqual(self.conn.execute('SELECT COUNT(*) FROM transcript WHERE video_url=?', (VIDEO_URL,)).fetchone()[0], 12377 if has_transcript else 0)
         for champion in champions:
             tips = search_tips(self.conn, champion['id'])
             self.assertGreaterEqual(len(tips), 4)
             for tip in tips:
                 validate_source(tip['source_sec'], champion)
                 self.assertEqual(tip['status'], '未確認')
-                evidence = self.conn.execute('SELECT 1 FROM transcript WHERE ABS(start_sec-?)<6 LIMIT 1', (tip['source_sec'],)).fetchone()
-                if has_transcript:
+                evidence = self.conn.execute('SELECT 1 FROM transcript WHERE video_url=? AND ABS(start_sec-?)<6 LIMIT 1', (champion['video_url'],tip['source_sec'])).fetchone()
+                if champion['video_url'] == VIDEO_URL and has_transcript:
                     self.assertIsNotNone(evidence)
 
     def test_initialization_preserves_edits_and_deletions(self):
@@ -106,11 +106,11 @@ class DatabaseTests(unittest.TestCase):
         self.assertEqual(self.conn.execute('SELECT detail FROM tips WHERE id=1').fetchone()[0], '自分の修正')
         self.assertIsNone(self.conn.execute('SELECT id FROM tips WHERE id=2').fetchone())
 
-    def test_all_fifty_checklists_are_installed(self):
+    def test_all_checklists_are_installed(self):
         install_dataset(self.conn)
         champions = self.conn.execute('SELECT * FROM champions').fetchall()
-        self.assertEqual(sum(len(json.loads(c['checklist_json'])) for c in champions), 250)
-        self.assertEqual(sum(len(json.loads(c['supplements_json'])) for c in champions), 37)
+        self.assertEqual(sum(len(json.loads(c['checklist_json'])) for c in champions), 355)
+        self.assertEqual(sum(len(json.loads(c['supplements_json'])) for c in champions), 58)
         for champion in champions:
             self.assertEqual(len(json.loads(champion['checklist_json'])), 5)
             for item in json.loads(champion['supplements_json']):
@@ -124,8 +124,8 @@ class DatabaseTests(unittest.TestCase):
         self.conn.commit()
         install_dataset(self.conn)
         install_dataset(self.conn)
-        self.assertEqual(self.conn.execute('SELECT COUNT(*) FROM tips').fetchone()[0], 1)
-        self.assertEqual(self.conn.execute('SELECT detail FROM tips').fetchone()[0], '手動で修正したノート')
+        self.assertEqual(self.conn.execute('SELECT COUNT(*) FROM tips WHERE champion_id=1').fetchone()[0], 1)
+        self.assertEqual(self.conn.execute('SELECT detail FROM tips WHERE champion_id=1').fetchone()[0], '手動で修正したノート')
         self.assertEqual(len(json.loads(self.conn.execute('SELECT checklist_json FROM champions').fetchone()[0])), 5)
 
     def test_malformed_checklist_is_rejected_atomically(self):
@@ -142,6 +142,44 @@ class DatabaseTests(unittest.TestCase):
         row = self.conn.execute('SELECT * FROM champions').fetchone()
         self.assertEqual(json.loads(row['checklist_json']), champion['checklist'])
         self.assertEqual(json.loads(row['supplements_json']), champion['supplements'])
+
+    def test_additional_sources_and_english_search(self):
+        install_dataset(self.conn)
+        for query, name in [('Gragas', 'グラガス'), ('TF', 'ツイステッド・フェイト'),
+                            ('Heimerdinger', 'ハイマー'), ('Zaahen', 'ザーヘン')]:
+            self.assertTrue(matches_champion(query, name))
+            row = self.conn.execute('SELECT * FROM champions WHERE name=?', (name,)).fetchone()
+            self.assertNotEqual(row['video_url'], VIDEO_URL)
+            self.assertEqual(row['start_sec'], 0)
+            self.assertTrue(video_link(30, row['video_url']).startswith(row['video_url']))
+
+    def test_transcripts_keep_video_identity(self):
+        second_url = 'https://www.youtube.com/watch?v=oY68nJ8BMrs'
+        for url in [VIDEO_URL, second_url]:
+            self.conn.execute('INSERT INTO transcript(start_sec,end_sec,content,video_url) VALUES(1,2,?,?)', ('同じ字幕', url))
+        self.assertEqual(self.conn.execute('SELECT COUNT(*) FROM transcript').fetchone()[0], 2)
+
+    def test_expansion_preserves_original_edits_and_deletions(self):
+        data = json.loads((Path(__file__).resolve().parents[1] / 'data/counters.json').read_text(encoding='utf-8'))
+        original = {'video_url': VIDEO_URL, 'champions': data['champions'][:50]}
+        restore_backup(self.conn, original)
+        self.conn.execute("UPDATE tips SET detail='編集済み',status='確認済み' WHERE id=1")
+        self.conn.execute('DELETE FROM tips WHERE id=2')
+        self.conn.executemany('INSERT INTO app_meta VALUES(?,?)', [('bundled_dataset_v1','1'), ('bundled_guides_v2','1')])
+        self.conn.commit()
+        install_dataset(self.conn)
+        self.assertEqual(self.conn.execute('SELECT COUNT(*) FROM champions').fetchone()[0], 71)
+        self.assertEqual(self.conn.execute('SELECT detail FROM tips WHERE id=1').fetchone()[0], '編集済み')
+        self.assertIsNone(self.conn.execute('SELECT id FROM tips WHERE id=2').fetchone())
+        count = self.conn.execute('SELECT COUNT(*) FROM tips').fetchone()[0]
+        install_dataset(self.conn)
+        self.assertEqual(self.conn.execute('SELECT COUNT(*) FROM tips').fetchone()[0], count)
+
+    def test_wrong_video_cannot_merge_into_existing_champion(self):
+        restore_backup(self.conn, self.backup)
+        self.backup['champions'][0]['video_url'] = 'https://www.youtube.com/watch?v=oY68nJ8BMrs'
+        with self.assertRaises(ValueError):
+            restore_backup(self.conn, self.backup)
 
 
 if __name__ == '__main__':

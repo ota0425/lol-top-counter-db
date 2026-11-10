@@ -12,10 +12,10 @@ class PublicSiteTests(unittest.TestCase):
         html = (ROOT / 'docs/index.html').read_text(encoding='utf-8')
         payload = re.search(r'<script id="counter-data" type="application/json">(.*?)</script>', html, re.S)[1]
         data = json.loads(payload)
-        self.assertEqual(len(data), 50)
-        self.assertEqual(sum(len(c['tips']) for c in data), 202)
-        self.assertEqual(sum(len(c['checklist']) for c in data), 250)
-        self.assertEqual(sum(len(c['supplements']) for c in data), 37)
+        self.assertEqual(len(data), 71)
+        self.assertEqual(sum(len(c['tips']) for c in data), 286)
+        self.assertEqual(sum(len(c['checklist']) for c in data), 355)
+        self.assertEqual(sum(len(c['supplements']) for c in data), 58)
         self.assertEqual(set(data[0]), {'name', 'aliases', 'tips', 'checklist', 'supplements'})
         source = json.loads((ROOT / 'data/counters.json').read_text(encoding='utf-8'))['champions']
         for champion in data:

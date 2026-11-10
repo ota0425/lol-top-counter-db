@@ -10,11 +10,11 @@ from db import (connect, VIDEO_URL, CATEGORIES, seconds, timestamp, video_link,
                 parse_captions, import_chapters, validate_source, restore_backup,
                 install_dataset, matches_champion, search_tips, search_key)
 
-st.set_page_config(page_title='LoL TOP対面対策DB', page_icon='🛡️', layout='wide')
+st.set_page_config(page_title='LoL 対面対策DB', page_icon='🛡️', layout='wide')
 conn = connect()
 install_dataset(conn)
-st.title('🛡️ LoL TOP対面対策DB')
-st.caption('チャンピオン名からTOPレーンの対策を検索')
+st.title('🛡️ LoL 対面対策DB')
+st.caption('チャンピオン名からTOP・MIDの対策を検索')
 checklist_count = sum(len(json.loads(row[0])) for row in conn.execute('SELECT checklist_json FROM champions'))
 col1, col2 = st.columns(2)
 col1.metric('収録チャンピオン', conn.execute('SELECT COUNT(*) FROM champions').fetchone()[0])
@@ -34,6 +34,8 @@ with setup_tab:
     st.divider()
     st.subheader('2. 字幕を取り込む（任意）')
     st.write('動画の字幕を `.srt` または `.vtt` 形式で用意してアップロードしてください。字幕がなくても対策の手入力は可能です。')
+    source_options = [dict(r) for r in conn.execute('SELECT video_url,MIN(name) AS label FROM champions GROUP BY video_url ORDER BY MIN(id)')]
+    selected_source = st.selectbox('字幕の対象動画', source_options, format_func=lambda v: '最初のTOPまとめ動画' if v['video_url']==VIDEO_URL else v['label']+'の対策動画')
     uploaded = st.file_uploader('字幕ファイル', type=['srt', 'vtt'])
     if uploaded is not None and st.button('字幕を取り込む'):
         try:
@@ -42,7 +44,7 @@ with setup_tab:
             if not rows:
                 st.warning('字幕行が見つかりません。SRT/VTTの形式を確認してください。')
             else:
-                conn.executemany('INSERT OR IGNORE INTO transcript(start_sec,end_sec,content) VALUES(?,?,?)', rows)
+                conn.executemany('INSERT OR IGNORE INTO transcript(start_sec,end_sec,content,video_url) VALUES(?,?,?,?)', [(*r, selected_source['video_url']) for r in rows])
                 conn.commit()
                 st.success(f'{len(rows)}行を読み込みました。')
         except UnicodeDecodeError:
@@ -61,7 +63,7 @@ with setup_tab:
         except (ValueError, TypeError, sqlite3.Error) as e:
             st.error(f'取り込めませんでした: {e}')
 
-champions = [dict(row) for row in conn.execute('SELECT * FROM champions ORDER BY start_sec')]
+champions = [dict(row) for row in conn.execute('SELECT * FROM champions ORDER BY id')]
 
 with search_tab:
     if not champions:
@@ -98,12 +100,12 @@ with review_tab:
         st.info('先にチャプターを登録してください。')
     else:
         selected = st.selectbox('チャンピオン', champions, format_func=lambda c: c['name'])
-        st.markdown(f"[動画の該当位置を開く]({video_link(selected['start_sec'])})")
+        st.markdown(f"[動画の該当位置を開く]({video_link(selected['start_sec'], selected['video_url'])})")
         start, end = selected['start_sec'], selected['end_sec']
         if end is None:
-            transcript_rows = conn.execute('SELECT * FROM transcript WHERE start_sec>=? ORDER BY start_sec', (start,)).fetchall()
+            transcript_rows = conn.execute('SELECT * FROM transcript WHERE video_url=? AND start_sec>=? ORDER BY start_sec', (selected['video_url'],start)).fetchall()
         else:
-            transcript_rows = conn.execute('SELECT * FROM transcript WHERE start_sec>=? AND start_sec<? ORDER BY start_sec', (start,end)).fetchall()
+            transcript_rows = conn.execute('SELECT * FROM transcript WHERE video_url=? AND start_sec>=? AND start_sec<? ORDER BY start_sec', (selected['video_url'],start,end)).fetchall()
         st.subheader('文字起こし（確認用）')
         if transcript_rows:
             full_text = '\n'.join(f"[{timestamp(r['start_sec'])}] {r['content']}" for r in transcript_rows)
@@ -135,7 +137,7 @@ with review_tab:
             with st.expander(f"#{tip['id']} [{tip['status']}] {tip['category']} — {tip['detail'][:45]}"):
                 st.write(tip['detail'])
                 if tip['source_sec'] is not None:
-                    st.markdown(f"[動画で確認]({video_link(tip['source_sec'])})")
+                    st.markdown(f"[動画で確認]({video_link(tip['source_sec'], selected['video_url'])})")
                 with st.form(f"edit_{tip['id']}"):
                     edit_category = st.selectbox('分類', CATEGORIES, index=CATEGORIES.index(tip['category']))
                     edit_detail = st.text_area('対策内容', value=tip['detail'])

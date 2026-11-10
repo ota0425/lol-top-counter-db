@@ -12,7 +12,7 @@ class IconTests(unittest.TestCase):
         self.catalog = json.loads((ROOT / 'data/icons.json').read_text(encoding='utf-8'))
 
     def test_all_champions_have_complete_skill_icons(self):
-        self.assertEqual(len(self.catalog['champions']), 50)
+        self.assertEqual(len(self.catalog['champions']), 71)
         for skills in self.catalog['champions'].values():
             self.assertEqual(set(skills), {'Q', 'W', 'E', 'R', 'ULT', 'パッシブ'})
             self.assertEqual(skills['ULT'], skills['R'])

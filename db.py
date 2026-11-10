@@ -42,6 +42,17 @@ def connect(path=DB):
     for column in ['checklist_json', 'supplements_json']:
         if column not in champion_columns:
             conn.execute(f"ALTER TABLE champions ADD COLUMN {column} TEXT NOT NULL DEFAULT '[]'")
+    if 'video_url' not in champion_columns:
+        conn.execute(f"ALTER TABLE champions ADD COLUMN video_url TEXT NOT NULL DEFAULT '{VIDEO_URL}'")
+    transcript_columns = {r['name'] for r in conn.execute('PRAGMA table_info(transcript)')}
+    if 'video_url' not in transcript_columns:
+        conn.execute('ALTER TABLE transcript RENAME TO transcript_legacy')
+        conn.execute('''CREATE TABLE transcript (
+            id INTEGER PRIMARY KEY, start_sec REAL NOT NULL, end_sec REAL NOT NULL,
+            content TEXT NOT NULL, video_url TEXT NOT NULL,
+            UNIQUE(video_url,start_sec,end_sec,content))''')
+        conn.execute('INSERT INTO transcript(id,start_sec,end_sec,content,video_url) SELECT id,start_sec,end_sec,content,? FROM transcript_legacy', (VIDEO_URL,))
+        conn.execute('DROP TABLE transcript_legacy')
     conn.commit()
     return conn
 
@@ -87,6 +98,14 @@ CHAMPION_ALIASES = {
     'ヨネ': ['Yone'], 'ヨリック': ['Yorick'], 'ランブル': ['Rumble'],
     'リヴェン': ['Riven', 'リベン'], 'リリア': ['Lillia'], 'レネクトン': ['Renekton'],
     'レンガー': ['Rengar'], 'ワーウィック': ['Warwick', 'ワーウィック'],
+    'グラガス': ['Gragas'], 'オリアナ': ['Orianna'], 'ルブラン': ['Leblanc', 'LeBlanc'],
+    'ツイステッド・フェイト': ['TwistedFate', 'Twisted Fate', 'TF'],
+    'サイラス': ['Sylas'], 'ヴェックス': ['Vex'], 'ビクター': ['Viktor'],
+    'ヴァルス': ['Varus', 'バルス'], 'イレリア': ['Irelia'], 'アニビア': ['Anivia'],
+    'アジール': ['Azir'], 'タロン': ['Talon'], 'アーリ': ['Ahri'],
+    'ハイマー': ['Heimerdinger', 'ハイマーディンガー'], 'ガリオ': ['Galio'],
+    'ザーヘン': ['Zaahen'], 'マルザハール': ['Malzahar', 'マルザ'],
+    'メル': ['Mel'], 'カタリナ': ['Katarina'], 'ゼド': ['Zed'], 'アクシャン': ['Akshan'],
 }
 
 
@@ -113,8 +132,8 @@ def timestamp(s):
     return f'{s//3600}:{s%3600//60:02d}:{s%60:02d}'
 
 
-def video_link(s):
-    return f'{VIDEO_URL}&t={int(s)}s'
+def video_link(s, video_url=VIDEO_URL):
+    return f'{video_url}&t={int(s)}s'
 
 
 def parse_captions(text):
@@ -177,6 +196,9 @@ def restore_backup(conn, data):
         if not isinstance(name, str) or not name.strip() or name in names:
             raise ValueError('チャンピオン名が空または重複しています。')
         names.add(name)
+        source_url = champ.get('video_url', data['video_url'])
+        if not isinstance(source_url, str) or not re.fullmatch(r'https://www\.youtube\.com/watch\?v=[A-Za-z0-9_-]{11}', source_url):
+            raise ValueError('動画URLの形式が不正です。')
         start, end = champ.get('start_sec'), champ.get('end_sec')
         if not valid_sec(start) or (end is not None and (not valid_sec(end) or end <= start)):
             raise ValueError('チャプターの時刻が不正です。')
@@ -211,9 +233,11 @@ def restore_backup(conn, data):
     with conn:
         for champ in champions:
             # Keep existing chapter boundaries when merging a backup.
-            conn.execute('INSERT OR IGNORE INTO champions(name,start_sec,end_sec) VALUES(?,?,?)',
-                         (champ['name'], champ['start_sec'], champ.get('end_sec')))
+            conn.execute('INSERT OR IGNORE INTO champions(name,start_sec,end_sec,video_url) VALUES(?,?,?,?)',
+                         (champ['name'], champ['start_sec'], champ.get('end_sec'), champ.get('video_url', data['video_url'])))
             current = conn.execute('SELECT * FROM champions WHERE name=?', (champ['name'],)).fetchone()
+            if current['video_url'] != champ.get('video_url', data['video_url']):
+                raise ValueError('既存チャンピオンと異なる動画の対策は同じ区間に復元できません。')
             for item in champ.get('supplements', []):
                 validate_source(item['source_sec'], current)
             for field in ['checklist', 'supplements']:
@@ -236,6 +260,7 @@ def install_dataset(conn):
     """Install the bundled source dataset once; preserve later edits and deletions."""
     if conn.execute("SELECT 1 FROM app_meta WHERE key='bundled_dataset_v1'").fetchone():
         install_guides(conn)
+        install_expansion(conn)
         return
     data_dir = Path(__file__).with_name('data')
     backup = json.loads((data_dir / 'counters.json').read_text(encoding='utf-8'))
@@ -244,9 +269,32 @@ def install_dataset(conn):
     rows = [(r['start'], r['start'] + r['duration'], r['text']) for r in transcript]
     restore_backup(conn, backup)
     with conn:
-        conn.executemany('INSERT OR IGNORE INTO transcript(start_sec,end_sec,content) VALUES(?,?,?)', rows)
+        conn.executemany('INSERT OR IGNORE INTO transcript(start_sec,end_sec,content,video_url) VALUES(?,?,?,?)', [(*r, VIDEO_URL) for r in rows])
         conn.execute("INSERT INTO app_meta(key,value) VALUES('bundled_dataset_v1','1')")
     install_guides(conn)
+    install_expansion(conn)
+
+
+def install_expansion(conn):
+    """Install the additional videos once without recreating edited/deleted records."""
+    if conn.execute("SELECT 1 FROM app_meta WHERE key='bundled_expansion_v3'").fetchone():
+        return
+    data_dir = Path(__file__).with_name('data')
+    data = json.loads((data_dir / 'counters.json').read_text(encoding='utf-8'))
+    additions = [c for c in data['champions'] if c.get('video_url', VIDEO_URL) != VIDEO_URL]
+    existing = {r[0] for r in conn.execute('SELECT name FROM champions')}
+    missing = [c for c in additions if c['name'] not in existing]
+    if missing:
+        restore_backup(conn, {'video_url': VIDEO_URL, 'champions': missing})
+    with conn:
+        for champion in additions:
+            video_id = champion['video_url'].split('v=')[1]
+            path = data_dir / 'transcripts' / f'{video_id}.ja.json'
+            if path.exists():
+                rows = json.loads(path.read_text(encoding='utf-8'))
+                conn.executemany('INSERT OR IGNORE INTO transcript(start_sec,end_sec,content,video_url) VALUES(?,?,?,?)',
+                                 [(r['start'], r['start']+r['duration'], r['text'], champion['video_url']) for r in rows])
+        conn.execute("INSERT INTO app_meta VALUES('bundled_expansion_v3','1')")
 
 
 def install_guides(conn):

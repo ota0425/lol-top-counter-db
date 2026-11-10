@@ -265,5 +265,10 @@
   "checklist_item_count": 250,
   "supplement_count": 37,
   "detail_note_count": 202,
-  "checklist_method": "各チャンピオンのまとめ画面を目視転記。アイコンは名称に置換。区切り記号の空白を統一。"
+  "checklist_method": "各チャンピオンのまとめ画面を目視転記。アイコンは名称に置換。区切り記号の空白を統一。",
+  "dataset_champion_count": 71,
+  "dataset_checklist_item_count": 355,
+  "dataset_supplement_count": 58,
+  "dataset_detail_note_count": 286,
+  "additional_video_count": 21
 }

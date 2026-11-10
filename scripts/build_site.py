@@ -14,7 +14,7 @@ def build(database=None):
         conn = connect(database)
         champions = []
         try:
-            for row in conn.execute('SELECT * FROM champions ORDER BY start_sec'):
+            for row in conn.execute('SELECT * FROM champions ORDER BY id'):
                 champions.append({'name': row['name'], 'checklist': json.loads(row['checklist_json']),
                                   'supplements': json.loads(row['supplements_json']),
                                   'tips': [dict(t) for t in search_tips(conn, row['id'])]})

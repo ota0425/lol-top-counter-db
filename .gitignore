@@ -10,3 +10,5 @@ data/transcript*.json
 .agents/
 .codex/
 .aws/
+
+/data/transcripts/
