@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="LoLのTOPレーン対策をチャンピオン名から検索。立ち位置、スキル対策、トレード、装備のポイントをすぐ確認できます。">
+<meta name="theme-color" content="#f6f8fc">
+<title>LoL TOP対面対策DB</title>
+<style>
+:root{color-scheme:light;--bg:#f6f8fc;--paper:#fff;--ink:#17243c;--muted:#617089;--line:#e0e6ef;--accent:#245de0;--soft:#edf2ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI","Noto Sans JP",sans-serif;line-height:1.8}main{max-width:1024px;margin:auto;padding:40px 24px 64px}.brand{font-size:12px;font-weight:750;letter-spacing:.16em;color:var(--accent)}header{padding:8px 0 24px}h1{font-size:clamp(27px,5vw,40px);line-height:1.4;letter-spacing:-.04em;margin:10px 0}header p{margin:8px 0;color:var(--muted)}.stats{display:flex;gap:24px;margin-top:20px;font-size:13px;color:var(--muted)}.stats strong{font-size:21px;color:var(--ink);margin-right:5px}label{display:block;font-size:14px;font-weight:650;margin-bottom:8px}.searchbox{position:relative}.search-icon{position:absolute;left:17px;top:13px;color:var(--muted);pointer-events:none}input{width:100%;border:1px solid #cbd5e4;border-radius:12px;padding:14px 52px 14px 48px;font:inherit;background:var(--paper);color:var(--ink);box-shadow:0 3px 12px #21385706}input:focus{outline:3px solid #245de025;border-color:var(--accent)}input::-webkit-search-cancel-button{display:none}button{font:inherit;cursor:pointer}.clear{position:absolute;right:9px;top:9px;width:36px;height:36px;background:none;border:0;color:var(--muted);border-radius:8px}.clear:hover{background:var(--bg)}.hint{font-size:12px;color:var(--muted);margin:8px 2px 20px}.result-header{display:flex;justify-content:space-between;align-items:center;margin:26px 0 12px;gap:12px}.result-header h2{font-size:16px;margin:0}.reset{border:0;background:none;color:var(--accent);font-size:13px;padding:6px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px}.champion{display:flex;align-items:center;justify-content:space-between;text-align:left;border:1px solid var(--line);border-radius:10px;background:var(--paper);padding:13px 14px;font-size:14px;color:var(--ink)}.champion:hover{border-color:var(--accent);background:var(--soft)}.champion small{font-size:11px;color:var(--muted);margin-left:8px}.counter{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}.counter summary{font-size:18px;font-weight:700;cursor:pointer;padding:18px 20px}.counter summary:hover{background:#fafbfe}.counter summary small{font-size:12px;font-weight:400;color:var(--muted);margin-left:12px}.tips{padding:0 22px 8px}.tip{border-top:1px solid var(--line);padding:18px 0}.category{display:inline-block;font-size:11px;font-weight:650;line-height:1.6;padding:3px 9px;background:var(--soft);color:var(--accent);border-radius:5px}.tip p{margin:8px 0 0;font-size:15px;line-height:1.95;overflow-wrap:anywhere}.empty{border:1px dashed #cbd5e4;border-radius:12px;padding:35px 20px;text-align:center;color:var(--muted)}.empty strong{display:block;color:var(--ink);font-size:16px}.empty p{font-size:13px;margin:8px 0 0}[hidden]{display:none!important}button:focus-visible,summary:focus-visible{outline:3px solid #245de055;outline-offset:3px}footer{font-size:11px;color:#7b899e;text-align:center;margin-top:40px;letter-spacing:.08em}noscript{display:block;padding:20px;background:var(--paper)}
+@media(max-width:540px){main{padding:22px 16px 40px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.champion{padding:12px 10px;font-size:13px}.counter summary{padding:15px 16px}.tips{padding:0 16px 6px}.stats{gap:18px}.tip p{font-size:14px}}
+@media(prefers-reduced-motion:no-preference){button,input{transition:border-color .15s,background .15s}}
+</style>
+</head>
+<body>
+<main>
+<header><div class="brand">TOP LANE / MATCHUP NOTES</div><h1>LoL TOP対面対策DB</h1><p>対面が決まったら、対策をチェック。</p><div class="stats"><span><strong id="champion-count">—</strong>チャンピオン</span><span><strong id="tip-count">—</strong>件の対策</span></div></header>
+<section aria-label="チャンピオン検索"><label for="search">対面チャンピオン名で検索</label><div class="searchbox"><span class="search-icon" aria-hidden="true">⌕</span><input id="search" type="search" placeholder="例：カミール / かみーる / Camille" autocomplete="off" enterkeyhint="search" spellcheck="false"><button id="clear" class="clear" type="button" aria-label="検索をクリア" hidden>×</button></div><p class="hint">日本語・ひらがな・英語名に対応。下の一覧からも選べます。</p></section>
+<div class="result-header"><h2 id="result-count" aria-live="polite">チャンピオン一覧</h2><button id="reset" class="reset" type="button" hidden>一覧に戻る</button></div>
+<div id="champion-grid" class="grid"></div>
+<div id="results"></div>
+<div id="empty" class="empty" hidden><strong>一致するチャンピオンがありません</strong><p>名前の一部や、ひらがな・英語名でも検索できます。</p></div>
+<noscript>検索を使うにはブラウザのJavaScriptを有効にしてください。</noscript>
+<footer>LOL TOP COUNTER DB</footer>
+</main>
+<script id="counter-data" type="application/json">__COUNTER_DATA__</script>
+<script>
+'use strict';
+const champions=JSON.parse(document.getElementById('counter-data').textContent);
+const search=document.getElementById('search');
+const grid=document.getElementById('champion-grid');
+const results=document.getElementById('results');
+const clear=document.getElementById('clear');
+const reset=document.getElementById('reset');
+const empty=document.getElementById('empty');
+function key(value){return value.normalize('NFKC').toLowerCase().replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60)).replace(/[\s・･.\-ー＝='’]/g,'');}
+function matches(value,champion){return [champion.name,...champion.aliases].some(alias=>key(alias).includes(key(value)));}
+function selectChampion(name){search.value=name;render();search.focus();updateURL();}
+function updateURL(){const url=new URL(location.href);if(search.value.trim())url.searchParams.set('champion',search.value.trim());else url.searchParams.delete('champion');history.replaceState(null,'',url);}
+function render(){
+ const query=search.value.trim();
+ const found=champions.filter(champion=>matches(query,champion));
+ document.getElementById('result-count').textContent=query?`${found.length}チャンピオンが一致`:'チャンピオン一覧';
+ grid.replaceChildren();results.replaceChildren();empty.hidden=found.length>0;
+ clear.hidden=!search.value;reset.hidden=!search.value;
+ if(!query){
+  for(const champion of found){const button=document.createElement('button');button.type='button';button.className='champion';const name=document.createElement('span');name.textContent=champion.name;const count=document.createElement('small');count.textContent=`${champion.tips.length}件`;button.append(name,count);button.addEventListener('click',()=>selectChampion(champion.name));grid.append(button);}
+ }else{
+  for(const champion of found){const details=document.createElement('details');details.className='counter';details.open=found.length===1;const summary=document.createElement('summary');summary.append(document.createTextNode(champion.name));const count=document.createElement('small');count.textContent=`${champion.tips.length}件の対策`;summary.append(count);details.append(summary);const tips=document.createElement('div');tips.className='tips';for(const tip of champion.tips){const block=document.createElement('div');block.className='tip';const label=document.createElement('span');label.className='category';label.textContent=tip.category;const body=document.createElement('p');body.textContent=tip.detail;block.append(label,body);tips.append(block);}details.append(tips);results.append(details);}
+ }
+}
+function clearSearch(){search.value='';render();updateURL();search.focus();}
+search.addEventListener('input',()=>{render();updateURL();});search.addEventListener('keydown',event=>{if(event.key==='Escape')clearSearch();});clear.addEventListener('click',clearSearch);reset.addEventListener('click',clearSearch);
+document.getElementById('champion-count').textContent=champions.length;document.getElementById('tip-count').textContent=champions.reduce((total,champion)=>total+champion.tips.length,0);search.value=new URL(location.href).searchParams.get('champion')||'';render();
+</script>
+</body>
+</html>

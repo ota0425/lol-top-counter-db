@@ -1,0 +1,1770 @@
+{
+  "video_url": "https://www.youtube.com/watch?v=gmuF58MD3ts",
+  "summary_method": "取得した日本語自動字幕の対策解説部分をAIで整理。動画の映像・音声とは未照合。現行パッチへの適合は未確認。",
+  "champions": [
+    {
+      "name": "アーゴット",
+      "start_sec": 0,
+      "end_sec": 944,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "周囲を回り込まず、同じ方向から戦う。すでにパッシブを使った脚の側に位置を保ち、複数の脚の追加攻撃を受けない。",
+          "source_sec": 53,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "プレスアタック採用時は通常攻撃を2発受けたら距離やブッシュで追撃を切る。発動を避けられないときはシールドを合わせる。",
+          "source_sec": 108,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "E＋フラッシュからのオールインを警戒する。遠くからEを使って接近してきたら、フラッシュで逃げる判断を早めに行う。",
+          "source_sec": 144,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Eを使わせた後が反撃の機会。シールドと移動手段を失った間に、同じ脚の側を維持して攻撃する。",
+          "source_sec": 229,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "動画ではフラッシュ、ワーデンメイル、プレートスチールキャップを推奨。相手自身の回復対策としてブランブルベストを優先する必要は薄いと説明している。",
+          "source_sec": 254,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "アカリ",
+      "start_sec": 944,
+      "end_sec": 1652,
+      "tips": [
+        {
+          "category": "スキル対策",
+          "detail": "Qが当たった後の強化通常攻撃まで受けないよう距離を取る。動画ではQそのものより、パッシブを絡めた追撃への警戒を重視している。",
+          "source_sec": 1014,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "味方ミニオンを盾にしてEの手裏剣を防ぐ。ミニオンから離れた位置で不用意にファームしない。",
+          "source_sec": 1068,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "気が少なく、Wの煙幕もない時間に攻める。気が多いときは連続スキルを警戒し、無理に殴り合わない。",
+          "source_sec": 1095,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "動画の対策項目ではW・Eを使った後の反撃も挙げている。煙幕や接近手段が残っている状態で追いかけ続けない。",
+          "source_sec": 962,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "アンベッサ",
+      "start_sec": 1652,
+      "end_sec": 2529,
+      "tips": [
+        {
+          "category": "トレード",
+          "detail": "スキルを一通り使わせた後に反撃する。スキルとダッシュが使えない時間を狙い、相手のショートトレードだけで終わらせない。",
+          "source_sec": 1709,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "ダッシュを追ってスキルを空振りするより、Qの攻撃にシールドや移動スキルを合わせる。",
+          "source_sec": 1760,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "Wで身構えている間やシールドが残っている間は攻撃を控え、シールドが消えてから反撃する。",
+          "source_sec": 1813,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "Rに対応できるようフラッシュを残す。動画ではRを見てから回避する方針を勧めている。",
+          "source_sec": 1847,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "動画ではレベル6以降の回復に対して重傷を推奨している。レベル6前と同じ回復性能だと思って殴り合わない。",
+          "source_sec": 1866,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "イラオイ",
+      "start_sec": 2529,
+      "end_sec": 3136,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "安全に攻撃できる触手はこまめに壊す。触手を壊しにくいチャンピオンでは、本体の動きだけでなく触手の叩きつけを避けることを優先する。",
+          "source_sec": 2594,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "触手を当てたときの回復を抑えるため、動画では重傷アイテムやイグナイトを勧めている。",
+          "source_sec": 2648,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Eを防ぐことを重視し、使わせた後に反撃する方針を取る。Eが残った相手へ無理に近づかない。",
+          "source_sec": 2547,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "長時間の殴り合いを避ける。触手が複数ある場所で、そのままロングトレードに付き合わない。",
+          "source_sec": 2549,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ヴェイン",
+      "start_sec": 3136,
+      "end_sec": 3722,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "ブッシュを使い、まず徒歩で接近する。Q・Eで離された後に自分の移動スキルを使い、もう一度距離を詰める。",
+          "source_sec": 3214,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "Q・Eを使わせた後に仕掛ける。倒しきれなくても相手のフラッシュやRを使わせれば、次のガンクや仕掛けにつながる。",
+          "source_sec": 3263,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "移動速度を早めに確保する。動画ではスイフトネスブーツやプレートスチールキャップを候補としている。",
+          "source_sec": 3281,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "序盤",
+          "detail": "無理に接近できない序盤はドランシールドと息継ぎで耐える方針。通常攻撃を受け続けてキルを渡さない。",
+          "source_sec": 3302,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ウディア",
+      "start_sec": 3722,
+      "end_sec": 4296,
+      "tips": [
+        {
+          "category": "スキル対策",
+          "detail": "覚醒スキルを使った直後を狙って反撃する。覚醒が使える状態の相手へ、何も考えず殴りかからない。",
+          "source_sec": 3789,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "殴り合いを狙うなら征服者・リーサルテンポなどを、序盤をしのぐならフェイズラッシュ・フリートフットワークなどの移動系ルーンを検討する、という使い分けが動画の方針。",
+          "source_sec": 3833,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "Rの範囲内に居続けない。移動速度を生かして範囲外へ出て、一方的な継続ダメージを避ける。",
+          "source_sec": 3847,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "動画ではスイフトネスブーツと重傷アイテムを対策として挙げている。回復とスローの両方を意識して準備する。",
+          "source_sec": 3743,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "エイトロックス",
+      "start_sec": 4296,
+      "end_sec": 4843,
+      "tips": [
+        {
+          "category": "序盤",
+          "detail": "最初の買い物前の弱い時間を狙う。ただしQの先端を繰り返し受けるような無理な殴り合いは避ける。",
+          "source_sec": 4322,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "序盤のウェーブ処理の遅さを利用して押し込み、相手が処理している間に視界確保やロームを行う。",
+          "source_sec": 4367,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Eを使わせた後にダメージ交換を狙う。Qの位置調整と逃げ手段がない時間を利用する。",
+          "source_sec": 4408,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "Qの回避とWからの離脱のため靴を早めに購入する。動画ではスイフトネスブーツと、回復を抑える重傷を勧めている。",
+          "source_sec": 4429,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "オーン",
+      "start_sec": 4843,
+      "end_sec": 5469,
+      "tips": [
+        {
+          "category": "スキル対策",
+          "detail": "Wで脆弱を付けられたら、通常攻撃やCCによる追撃を受けないよう、効果が切れるまで距離を取る。",
+          "source_sec": 4905,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "自然の壁だけでなく、Qで作られた柱からも離れる。Eの衝突によるノックアップを受ける位置に立たない。",
+          "source_sec": 4963,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "スキルを使い切った後の時間に反撃する。相手が得意なスキル一巡の短い交換だけで終わらせない。",
+          "source_sec": 4980,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "動画の対策ではRへの対応用にスキルを残すことも重視している。自分の移動・防御手段を不用意に使い切らない。",
+          "source_sec": 5013,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "オラフ",
+      "start_sec": 5469,
+      "end_sec": 6033,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "動画ではレーンで勝負するならイグナイト＋フラッシュを推奨し、スケール重視ならテレポートも許容している。自分の勝ち方に合わせて選ぶ。",
+          "source_sec": 5497,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "味方ミニオンと重ならず距離を置く。Qでハラスとウェーブ処理を同時に行わせない。",
+          "source_sec": 5522,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "短い交換を狙うならプレスアタック、長く戦えるチャンピオンなら征服者など、逃げる方針ならフェイズラッシュ等を検討する、という使い分けをしている。",
+          "source_sec": 5567,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "Wと低体力時のパッシブを考慮する。相手が瀕死に見えても、回復とシールドを無視してキルを狙わない。",
+          "source_sec": 5604,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "カサンテ",
+      "start_sec": 6033,
+      "end_sec": 6797,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "味方ミニオンに重ならず、Qでプッシュとハラスを両立させない位置を取る。",
+          "source_sec": 6061,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Wのチャージへ大事なCCや攻撃スキルを使わない。Wを使い終わった後を反撃の機会にする。",
+          "source_sec": 6099,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Eで移動した直後のシールドに攻撃を吸われないよう待ち、シールドが消えてから反撃する。",
+          "source_sec": 6128,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "低体力でもRからの逆転を考慮する。Rによるスキル再使用を無視して突っ込まず、タワーや壁際でも不用意に戦わない。",
+          "source_sec": 6163,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "カミール",
+      "start_sec": 6797,
+      "end_sec": 7467,
+      "tips": [
+        {
+          "category": "トレード",
+          "detail": "パッシブのシールドが消えてから本命のスキルを使う。シールドがある間に正面から殴り合わない。",
+          "source_sec": 6865,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "動画ではパッシブを絡めた短い交換が強いと説明している。シールドとスキルを使わせた後に交換を続ける機会を探す。",
+          "source_sec": 6879,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Eの接近に防御・CCなどの対応スキルを合わせる。動画ではガレンW、オーンW、パンテオンEなどを例に挙げている。",
+          "source_sec": 6920,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "動画の対策項目ではQのチャージ中に距離を取ること、Rを使われる前に体力差を作ること、体力を増やす装備も挙げている。",
+          "source_sec": 6817,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ガレン",
+      "start_sec": 7467,
+      "end_sec": 7937,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "定期的にダメージを与え、パッシブで自由に回復させない。削った後に長時間放置しない。",
+          "source_sec": 7513,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "序盤",
+          "detail": "レベル6前や装備が少ない時間に有利を作る。押し込める状況なら、ウェーブ処理中に視界確保やロームを行う。",
+          "source_sec": 7543,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Wを使わせた後は強気に交換を狙う。防御効果が残っている間に主力を使い切らない。",
+          "source_sec": 7578,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "動画では倒される体力の境界を意識すること、味方ミニオンの中に不用意に立たないことも対策として挙げている。",
+          "source_sec": 7487,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ガングプランク",
+      "start_sec": 7937,
+      "end_sec": 8664,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "樽を放置して主導権を渡さず、安全に狙える樽は積極的に壊す。樽への最後の攻撃を相手に取らせないことを意識する。",
+          "source_sec": 8010,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "パッシブの強化通常攻撃を警戒する。樽を爆破した後はパッシブの再使用があり得るため、通常攻撃の追撃まで受けない。",
+          "source_sec": 8038,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "序盤",
+          "detail": "動画では最初のリコール前に有利を築く方針を示している。買い物後まで自由にファームさせる展開を避ける。",
+          "source_sec": 7955,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "Wを使った後を反撃の機会としている。防御・回復の手段が残っている前提で無理に倒しきろうとしない。",
+          "source_sec": 7956,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "クイン",
+      "start_sec": 8664,
+      "end_sec": 9237,
+      "tips": [
+        {
+          "category": "スキル対策",
+          "detail": "まず徒歩や移動速度で近づいてEを使わせ、その後でブリンクやサモナースペルを使い再接近する。",
+          "source_sec": 8717,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "弱点を付けられた状態からの通常攻撃を警戒する。動画では弱点への攻撃が追加ダメージと移動・攻撃速度上昇につながると説明している。",
+          "source_sec": 8749,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "動画ではパッシブの弱点がミニオンに付いたタイミングを仕掛ける候補として挙げている。",
+          "source_sec": 8682,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "味方ミニオンを盾にQを防ぎ、序盤のハラスにはドランシールド・息継ぎを検討する。動画ではプレートスチールキャップも推奨している。",
+          "source_sec": 8684,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "グウェン",
+      "start_sec": 9237,
+      "end_sec": 9827,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "Qのスタックを見て交換を決める。少ないときに攻め、最大まで溜まっているときは正面で受けない。",
+          "source_sec": 9282,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Qの中心線を避ける。動画では中央への命中が追加のダメージと回復につながる点を重視している。",
+          "source_sec": 9301,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "E直後の強化通常攻撃が続く間は距離を取る。単に移動スキルを使ったから無防備になったと思って殴り合わない。",
+          "source_sec": 9329,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "Wの霧が有効な間は無理に戦わない。動画では回復への重傷も対策に挙げている。",
+          "source_sec": 9362,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "クレッド",
+      "start_sec": 9827,
+      "end_sec": 10656,
+      "tips": [
+        {
+          "category": "注意点",
+          "detail": "非騎乗になったら勇気ゲージも確認する。再騎乗で体力が補充され、Q・Eも使い直せるため、低体力という見た目だけで追わない。",
+          "source_sec": 9880,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "再騎乗直前を特に警戒する。勇気が溜まった相手へ長く殴り合いを続け、逆転される展開を避ける。",
+          "source_sec": 9973,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "動画の対策項目ではWを常に意識し、Eが届かない距離を維持することを挙げている。",
+          "source_sec": 9847,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "簡単にウェーブを押し付けられないようにする。動画ではCCへの耐性を持つルーンも候補にしている。",
+          "source_sec": 9851,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ケイル",
+      "start_sec": 10656,
+      "end_sec": 11290,
+      "tips": [
+        {
+          "category": "序盤",
+          "detail": "序盤だからとレベル1から長時間殴り合わない。動画ではレベル2までは慎重に、スキルが揃うレベル3以降に交換を狙うとしている。",
+          "source_sec": 10712,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "序盤のウェーブ処理の遅さを利用して押し込み、処理中に視界確保やロームで差を作る。",
+          "source_sec": 10740,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "ブッシュから接近して短く攻撃し、追い続けず引く。相手の通常攻撃に長時間付き合わない。",
+          "source_sec": 10765,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "ブッシュで通常攻撃やEの対象になりにくくする。動画では早めの靴とヒットアンドアウェイも対策に挙げている。",
+          "source_sec": 10797,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ケネン",
+      "start_sec": 11290,
+      "end_sec": 11833,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "味方ミニオンを盾にQを防ぐ。Qで体力を削られ続ける位置に立たない。",
+          "source_sec": 11342,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Wパッシブの強化通常攻撃を警戒する。手裏剣が光っているときは距離やブッシュでやり過ごす。",
+          "source_sec": 11407,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "動画ではEを使った後を仕掛けるタイミングとして挙げている。逃げ手段が残った相手を無理に追い続けない。",
+          "source_sec": 11305,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "序盤のハラスにドランシールドと息継ぎを検討し、早めのマーキュリーブーツで魔法ダメージとCCに備えるのが動画の方針。",
+          "source_sec": 11307,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "サイオン",
+      "start_sec": 11833,
+      "end_sec": 12323,
+      "tips": [
+        {
+          "category": "トレード",
+          "detail": "交換するときは根元に入り、必要に応じて背後へ回る。方向指定スキルを当てやすい中距離で立ち止まらない。",
+          "source_sec": 11868,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Wを展開されたら、再発動される前にシールドを壊せるか判断する。壊しきれないなら範囲から離れて爆発を受けない。",
+          "source_sec": 11925,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "ミニオンへのスキル使用で自由に処理を進めさせないことを意識する。ハラスとプッシュを同時に許す立ち位置を避ける。",
+          "source_sec": 11849,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "ミニオンの延長線上に立たず、早めの靴でスキルを避けやすくする方針が動画で示されている。",
+          "source_sec": 11851,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ザック",
+      "start_sec": 12323,
+      "end_sec": 12973,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "回収される前に小型スライムを踏む。相手の方が近いときは無理をせず、安全に取れるものから回復とスキル回転を妨げる。",
+          "source_sec": 12382,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Qでミニオンをつかんだ後は近寄らず、効果が切れるまで待つ。自分とミニオンをぶつける追撃を許さない。",
+          "source_sec": 12429,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "動画ではEを使った後の反撃と、短い一方的なコンボだけで終わらせず長めに交換する方針を挙げている。",
+          "source_sec": 12339,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "回復への重傷・イグナイト、耐久への対タンク装備、CCへのマーキュリーブーツを候補としている。",
+          "source_sec": 12341,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ジェイス",
+      "start_sec": 12973,
+      "end_sec": 13849,
+      "tips": [
+        {
+          "category": "スキル対策",
+          "detail": "ハンマーEのノックバックを使わせた後に再接近する。最初からブリンクを使い切らず、徒歩で近づく段階を挟む。",
+          "source_sec": 13045,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "キャノンQにはミニオンを盾にする。ただしゲート通過後は爆発範囲が広くなるため、ミニオンに密着しすぎない。",
+          "source_sec": 13070,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "動画の対策項目では、形態切り替え後の通常攻撃を意識することを挙げている。切り替え直後の追撃を不用意に受けない。",
+          "source_sec": 12988,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "オールインへのボーンアーマー、ハラスへのドランシールド、接近や回避に使う靴を候補としている。",
+          "source_sec": 12990,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "シェン",
+      "start_sec": 13849,
+      "end_sec": 14859,
+      "tips": [
+        {
+          "category": "トレード",
+          "detail": "パッシブのシールドが消えてから本体の体力を削る。シールド中にスキルを全部使って交換を終えない。",
+          "source_sec": 13910,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Wに通常攻撃を止められたとき用のスキルを残す。自分のどの攻撃がWで防がれるかも把握しておく。",
+          "source_sec": 13945,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "敵タワー下へ安易に入らない。Eのダッシュとタウントで足止めされる危険を考慮する。",
+          "source_sec": 13967,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "見失ったまま放置せず、視界内で動きを確認する。動画では打ちこわしやハルブレイカーでタワーへの圧力を作る案も挙げている。",
+          "source_sec": 13866,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ジャックス",
+      "start_sec": 14859,
+      "end_sec": 15407,
+      "tips": [
+        {
+          "category": "スキル対策",
+          "detail": "Eの回避中に通常攻撃や通常攻撃強化を使い切らない。自分のスキルで通るものを把握し、それで対応する。",
+          "source_sec": 14923,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "Qで飛び込まれたとき用にブリンク・防御・CCを残す。接近されてから距離を取り、Eのスタンと長い追撃を避ける。",
+          "source_sec": 14946,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "長時間の殴り合いを避け、短い交換を重ねる。攻撃を続けて相手のパッシブやルーンを生かさせない。",
+          "source_sec": 14985,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "動画では雑なロームを避けることも重視している。レーンを離れるときはウェーブとタワーの状況を確認する。",
+          "source_sec": 14878,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "シンジド",
+      "start_sec": 15407,
+      "end_sec": 16018,
+      "tips": [
+        {
+          "category": "序盤",
+          "detail": "最初のウェーブでのプロキシを警戒する。動画では初回のミニオンに同行し、現れた相手の体力を削って妨げる方法を示している。",
+          "source_sec": 15448,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "毒の軌跡にできるだけ触れない。追いかけて毒を踏み続けるより、位置を確認してファームや短い攻撃を行う。",
+          "source_sec": 15490,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "低体力でも無理に追わない。退かせたらウェーブを押し切り、プレートやロームで有利を生かす。",
+          "source_sec": 15509,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "征服者やRが生きる長い交換に付き合わない。短く攻撃して離れることを基本とする。",
+          "source_sec": 15529,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "スカーナー",
+      "start_sec": 16018,
+      "end_sec": 16957,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "壁から距離を取り、レーン中央を使う。Eで運ばれて壁にぶつけられる立ち位置を避ける。",
+          "source_sec": 16082,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "ミニオンに重ならないようにする。Qによるウェーブ処理とハラスを同時に行わせない。",
+          "source_sec": 16117,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "Wを使った直後のシールドが消えるまで交換を控える、という方針を動画で挙げている。",
+          "source_sec": 16034,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "タワー付近での不用意な戦闘を避ける。動画ではプレートスチールキャップやスイフトネスブーツも対策候補としている。",
+          "source_sec": 16037,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "セト",
+      "start_sec": 16957,
+      "end_sec": 17492,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "最初の通常攻撃をただで受けてコンボを開始させない。徒歩で殴りに来たら、一度通常攻撃が届かない距離へ下がる。",
+          "source_sec": 17014,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "闘魂が溜まった状態で最大火力のWを受けない。動画ではゲージが減るまで一旦間を空ける対策を説明している。",
+          "source_sec": 17087,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "長く殴り合わず、短い交換に徹する。闘魂を溜めた相手にそのまま攻撃を続けない。",
+          "source_sec": 16978,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "動画では交換するタイミングの見極めとボーンアーマーを重視している。相手のスキルを確認せず殴り合いを始めない。",
+          "source_sec": 16980,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ダリウス",
+      "start_sec": 17492,
+      "end_sec": 18109,
+      "tips": [
+        {
+          "category": "トレード",
+          "detail": "出血が5スタックになるまで殴り合わない。短い交換で切り上げ、相手のパッシブとRを強化させない。",
+          "source_sec": 17541,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Qの刃先を避ける。後ろへ離れるか懐へ入るかを選び、中途半端な距離で外周を受けない。",
+          "source_sec": 17583,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Eを使った後を短い反撃の機会にする。Eが残っている間は、逃げるための手段を不用意に消費しない。",
+          "source_sec": 17629,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "動画では短い交換向けのプレスアタック・電撃や、離脱向けのフェイズラッシュ・フリートフットワークを候補としている。重傷やスイフトネスブーツも対策項目にある。",
+          "source_sec": 17569,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "チョガス",
+      "start_sec": 18109,
+      "end_sec": 18644,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "瀕死の味方ミニオン付近に立たない。Q・EによるCS回収とハラスを同時に許さない。",
+          "source_sec": 18156,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Wのサイレンスを使わせた後に交換を狙う。QからWで一方的に攻撃される流れを避ける。",
+          "source_sec": 18212,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "動画ではRの有無を把握することを重視している。低体力で近づく前に捕食が使える状況か考える。",
+          "source_sec": 18127,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "動画の方針は、スキルを使わせた後に長めの交換を狙うこと。装備候補としてマーキュリーブーツと対タンクアイテムを挙げている。",
+          "source_sec": 18129,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ティーモ",
+      "start_sec": 18644,
+      "end_sec": 19180,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "プレスアタックの連続攻撃を完成させない。発動しそうならブッシュや移動スキルで離れ、離脱できない場合はシールドを合わせる。",
+          "source_sec": 18712,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "ステルス解除直後の攻撃速度上昇中は距離を取る。強化中に通常攻撃の交換へ付き合わない。",
+          "source_sec": 18737,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "序盤",
+          "detail": "序盤はドランシールドと息継ぎで体力を維持し、ハラスでキルラインまで削られないようにする。",
+          "source_sec": 18757,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "動画ではキノコ対策として早めのオラクルレンズとコントロールワード、魔法ダメージへの防具を挙げている。",
+          "source_sec": 18664,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "トランドル",
+      "start_sec": 19180,
+      "end_sec": 19954,
+      "tips": [
+        {
+          "category": "スキル対策",
+          "detail": "Qで噛まれただけでブリンクを使い切らない。短く応戦しつつ徒歩で下がり、Eの柱で追撃されたときに移動スキルを使って離脱する。",
+          "source_sec": 19294,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "Wのフィールドの効果が切れた後を狙う、という方針を動画で挙げている。攻撃速度と移動速度が上がった相手に長く付き合わない。",
+          "source_sec": 19198,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "レーンを雑に離れない。ローム前にウェーブとタワーの状況を確認し、自由に押し続けさせる展開を避ける。",
+          "source_sec": 19201,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "動画ではスイフトネスブーツを対策候補にしている。柱やスローから離れられるよう移動速度を意識する。",
+          "source_sec": 19203,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "トリンダメア",
+      "start_sec": 19954,
+      "end_sec": 20660,
+      "tips": [
+        {
+          "category": "アイテム",
+          "detail": "通常攻撃主体のダメージに備え、ワーデンメイルやプレートスチールキャップを検討する。動画ではフローズンハートへの派生も挙げている。",
+          "source_sec": 20006,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "追撃に対抗するサモナースペルを用意する。動画では距離を取りたいチャンピオンにゴースト、耐えて戦うタンクやファイターにイグゾーストを勧めている。",
+          "source_sec": 20060,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "動画の対策項目ではなるべく相手へ前を向くことを挙げている。逃げるときもWの条件を意識する。",
+          "source_sec": 19974,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "フューリーが少ないときに交換し、長時間の殴り合いを避ける。ゲージが溜まった相手に無理に付き合わない。",
+          "source_sec": 19977,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ナー",
+      "start_sec": 20660,
+      "end_sec": 21278,
+      "tips": [
+        {
+          "category": "トレード",
+          "detail": "怒りゲージが少ないときや、メガナーが終わった直後に交換を狙う。変身直前のミニナーを弱いと思って突っ込まない。",
+          "source_sec": 20686,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "ブッシュを使って通常攻撃を切り、Wの3回攻撃を完成させにくくする。接近するときにもブッシュを利用する。",
+          "source_sec": 20758,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Eを使わせた後に仕掛ける。ジャンプが残っている状態で追撃手段を使い切らない。",
+          "source_sec": 20783,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "動画ではミニオンを盾にする立ち位置と、靴・移動系ルーンの採用を対策として挙げている。",
+          "source_sec": 20677,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ナサス",
+      "start_sec": 21278,
+      "end_sec": 22356,
+      "tips": [
+        {
+          "category": "序盤",
+          "detail": "理由のないプッシュで安全にQを重ねさせない。序盤に強いチャンピオンならゾーニングし、経験値を取りに来たところを攻撃する。",
+          "source_sec": 21320,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "序盤の勝負が難しいなら、ミニオンを溜めた大きなウェーブを押し付ける。処理の時間に敵陣への視界確保などを行う。",
+          "source_sec": 21356,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "W・Eを使った後の反撃を狙い、Wに対抗するスキルや移動系ルーンを用意する方針が動画で示されている。",
+          "source_sec": 21290,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "簡単にレーンを離れて自由なファームを与えない。動画では回復への重傷・イグナイトとスイフトネスブーツも挙げている。",
+          "source_sec": 21295,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "パンテオン",
+      "start_sec": 22356,
+      "end_sec": 22968,
+      "tips": [
+        {
+          "category": "注意点",
+          "detail": "Qで削ってからWでオールインする流れを警戒する。パッシブの強化状態と自分の体力を見て、キルラインで無理にCSを取らない。",
+          "source_sec": 22408,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "序盤",
+          "detail": "序盤はキルを渡さず経験値を確保する。動画ではレベル6と防具購入まで安全にしのぐ方針を勧めている。",
+          "source_sec": 22448,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "クロースアーマーやプレートスチールキャップなどの物理防御を早めに確保する。動画ではボーンアーマーも対策に挙げている。",
+          "source_sec": 22458,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Wからの接近に対応する防御スキルを残しておき、飛び込まれた瞬間に合わせる。",
+          "source_sec": 22496,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "フィオラ",
+      "start_sec": 22968,
+      "end_sec": 23732,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "相手が攻撃しやすい位置に急所が出たら、距離を取って位置をリセットする。戦闘中は壁際へ急所を隠す方法も示されている。",
+          "source_sec": 23017,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Wが残った相手へ大事なCCを雑に入れない。リポストで無効化され、逆にスタンを受ける流れを避ける。",
+          "source_sec": 23063,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "Wを使った後を攻める機会にする。防御手段が残っている間に無理にすべてのスキルを使わない。",
+          "source_sec": 22983,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "動画では雑なロームを避けること、回復への重傷とスイフトネスブーツの採用も対策に挙げている。",
+          "source_sec": 22986,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ブラッドミア",
+      "start_sec": 23732,
+      "end_sec": 24311,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "ゲージ最大時の強化Qを受けない。最大になってから慌てて逃げるより、移動速度が上がる前から十分に距離を取る。",
+          "source_sec": 23808,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Wの回避を前提に仕掛ける。Wがある状態で接近・主力スキルを使い切り、一方的に交換を拒否されないようにする。",
+          "source_sec": 23850,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "ソロキルだけに固執せず、オブジェクトで差を作る方針が動画で示されている。",
+          "source_sec": 23749,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "相手が採用しているルーンに応じて交換の仕方を変える。動画では回復への重傷アイテムも対策に挙げている。",
+          "source_sec": 23752,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ポッピー",
+      "start_sec": 24311,
+      "end_sec": 24963,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "落ちたバックラーを安全に踏み、回収によるシールド獲得を妨げる。",
+          "source_sec": 24354,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "味方ミニオンと重ならない。Qでウェーブ処理とハラスを同時に行わせず、どちらかを選ばせる。",
+          "source_sec": 24366,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "壁から離れて戦い、Eで壁に押し付けられる位置に立たない。壁への衝突によるスタンと追加ダメージを防ぐ。",
+          "source_sec": 24390,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "Wが残っている間はダッシュ系スキルを不用意に使わない。対策装備として動画では重傷とスイフトネスブーツも挙げている。",
+          "source_sec": 24415,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ボリベア",
+      "start_sec": 24963,
+      "end_sec": 25672,
+      "tips": [
+        {
+          "category": "トレード",
+          "detail": "長い殴り合いを拒否し、短く交換する。Qで接近されたときの移動・防御手段を残しておく。",
+          "source_sec": 25019,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Eの範囲とシールドに注意する。ダメージを受け、相手にシールドがある状態でそのまま殴り合わない。",
+          "source_sec": 25036,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "Wで負傷を付けられた後は再度噛まれる展開を避ける。Wを考慮して交換を切り上げる。",
+          "source_sec": 25072,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "自由にプッシュさせない方針を動画で挙げている。装備・ルーン候補はプレートスチールキャップ、ブランブルベスト、ワーデンメイル、息継ぎ。",
+          "source_sec": 24980,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "マルファイト",
+      "start_sec": 25672,
+      "end_sec": 26402,
+      "tips": [
+        {
+          "category": "アイテム",
+          "detail": "Qの魔法ダメージに備え、魔法防御や息継ぎを検討する。動画では早めのマーキュリーブーツを勧めている。",
+          "source_sec": 25706,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Rを避けるためフラッシュを残す。Rがあるときのガンク合わせも警戒し、逃げ手段を雑に消費しない。",
+          "source_sec": 25735,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "Eを受けた後は通常攻撃の交換にこだわらない。攻撃速度低下中はスキルで短く返すか、一度距離を取る。",
+          "source_sec": 25764,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "動画の対策項目では定期的な攻撃も挙げている。相手が自由に防御態勢を整えられる時間を作らないよう意識する。",
+          "source_sec": 25692,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ムンド",
+      "start_sec": 26402,
+      "end_sec": 27029,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "味方ミニオンを盾にしてQを防ぐ。ミニオンのない場所で包丁を受け続けない。",
+          "source_sec": 26445,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Wを使ったら範囲から離れ、無理に攻撃を続けない。再発動の回復を無視して倒しきろうとしない。",
+          "source_sec": 26502,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "パッシブがあると最初の移動不能効果を無効化される。先に消費させることを意識し、落ちた薬品の回収にも注意する。",
+          "source_sec": 26515,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "Rでの立て直しを見込んで戦う。動画ではスイフトネスブーツと重傷を対策として挙げている。",
+          "source_sec": 26418,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "モルデカイザー",
+      "start_sec": 27029,
+      "end_sec": 28250,
+      "tips": [
+        {
+          "category": "トレード",
+          "detail": "3回攻撃によるパッシブを完成させないよう短い交換で離れる。Eで引かれたときに離脱できるスキルを残す。",
+          "source_sec": 27088,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "E・Wを使った後に反撃する。移動手段が乏しい相手の引き寄せと防御がない時間を利用する。",
+          "source_sec": 27144,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "動画ではミニオンの中を使う立ち位置を対策に挙げている。孤立した状態だけで交換を繰り返さない。",
+          "source_sec": 27043,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "Rに対応する移動・防御などのスキルを温存する。動画ではスイフトネスブーツや重傷も候補としている。",
+          "source_sec": 27046,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ヤスオ",
+      "start_sec": 28250,
+      "end_sec": 28804,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "ミニオンの上で戦わない。Qでプッシュとハラスを兼ねられたり、Eで接近・追撃されたりする位置を避ける。",
+          "source_sec": 28278,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "パッシブのシールドをこまめにはがし、それがない時間に本命の交換を狙う。",
+          "source_sec": 28335,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "ロングトレードを避ける。ミニオンから離れた位置を保ち、短い交換で切り上げる。",
+          "source_sec": 28375,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "レベル2までは慎重に立ち回り、飛び道具を使う場合はWの風の壁も考慮する方針が動画で示されている。",
+          "source_sec": 28269,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ヨネ",
+      "start_sec": 28804,
+      "end_sec": 29409,
+      "tips": [
+        {
+          "category": "スキル対策",
+          "detail": "Eと強化Qで接近してくる流れを警戒する。Qのスタックを確認し、離れるかCC・ブリンク・シールドを準備する。",
+          "source_sec": 28840,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "Eを使わせた後に反撃する。E中の追撃に付き合い続けず、まず距離を取って長い交換を拒否する。",
+          "source_sec": 28916,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "動画ではWのシールドがある間はいったん離れることを対策に挙げている。",
+          "source_sec": 28824,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "動画の候補はフェイズラッシュ、プレスアタック、ボーンアーマー。装備では攻撃速度を下げる防具とプレートスチールキャップを挙げている。",
+          "source_sec": 28827,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ヨリック",
+      "start_sec": 29409,
+      "end_sec": 29913,
+      "tips": [
+        {
+          "category": "序盤",
+          "detail": "レベル6までにゾーニングで差を作る。Qで墓を作られる場合は、延々と殴り合わず墓の数も確認する。",
+          "source_sec": 29436,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "EとWで捕まっても、本体だけを追わずグールを落ち着いて処理する。動画では通常攻撃による処理を勧めている。",
+          "source_sec": 29485,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "墓が少なく、乙女もいないときに強気に交換する。召喚物が揃っている状態で無理に戦わない。",
+          "source_sec": 29516,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "雑なロームでレーンを空けない。離れる前にウェーブとタワーへの圧力を確認する。",
+          "source_sec": 29427,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ランブル",
+      "start_sec": 29913,
+      "end_sec": 30514,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "ヒートゲージを見て仕掛ける。動画ではデンジャーゾーンを維持した状態を警戒し、ゲージが少ない時間やスキルを使いにくい時間を狙うとしている。",
+          "source_sec": 29966,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Eに続けて当たらないようにする。1発受けたら距離を取り、スローと魔法防御低下を重ねられないようにする。",
+          "source_sec": 30015,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "狭い場所での戦闘を避ける。自分から逃げ場の少ない場所へ入って交換を始めない。",
+          "source_sec": 29930,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "短い交換向けのルーンを選び、マーキュリーブーツや魔法防御アイテムを検討する方針が動画で示されている。",
+          "source_sec": 29932,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "リヴェン",
+      "start_sec": 30514,
+      "end_sec": 31057,
+      "tips": [
+        {
+          "category": "トレード",
+          "detail": "短く攻撃して引く交換を重ねる。スキルと強化通常攻撃が続く長い殴り合いに付き合わない。",
+          "source_sec": 30549,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "Eでシールドを得て接近してきたら、一度下がる。シールドが消えてから反撃する。",
+          "source_sec": 30592,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "Wを使った後を狙って仕掛ける。WのスタンとQ3段目のノックアップを続けて受ける展開を避ける。",
+          "source_sec": 30604,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "動画ではイグゾーストをサモナースペル候補にし、重傷装備も対策として挙げている。装備の有効性は相手のビルドも見て判断する。",
+          "source_sec": 30530,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "リリア",
+      "start_sec": 31057,
+      "end_sec": 31588,
+      "tips": [
+        {
+          "category": "スキル対策",
+          "detail": "Qの先端を避ける。射程の外へ下がるか内側へ入り、外周だけを受け続けない。",
+          "source_sec": 31087,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "愚直に追わない。相手の移動速度スタックと自分のスキルを見て、追い切れるか判断する。",
+          "source_sec": 31107,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "序盤",
+          "detail": "序盤はQの先端を避けながら押し込み、処理中に視界確保やロームで差を作る。",
+          "source_sec": 31135,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "短い交換を重ねる。動画ではプレスアタック・電撃・フェイズラッシュ等を候補にし、装備では重傷・魔法防御・マーキュリーブーツを挙げている。",
+          "source_sec": 31161,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "レネクトン",
+      "start_sec": 31588,
+      "end_sec": 32142,
+      "tips": [
+        {
+          "category": "トレード",
+          "detail": "短い交換に徹し、通常攻撃でフューリーを溜めさせる長い殴り合いを避ける。",
+          "source_sec": 31617,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "自分から接近スキルを使い切らない。Qが届かない距離を保ち、近づかれたら下がりながら短く応戦する。",
+          "source_sec": 31654,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "スキル対策",
+          "detail": "フューリーがある状態のE2段目を警戒する。物理防御低下を受けて、そのまま追撃される状況を避ける。",
+          "source_sec": 31679,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "強化Wで壊されるシールドを先に使わない。Wを使わせてから防御手段を使うタイミングを考える。",
+          "source_sec": 31708,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "レンガー",
+      "start_sec": 32142,
+      "end_sec": 32758,
+      "tips": [
+        {
+          "category": "基本対策",
+          "detail": "ブッシュからの飛びかかりが届かない位置でファームする。安全に過ごしたい時間にブッシュ際へ近寄らない。",
+          "source_sec": 32201,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "戦う場面では距離を空け続けず、動画では密着して飛びかかりを繰り返されにくくする方法を示している。",
+          "source_sec": 32219,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "フェロシティが最大の相手へ仕掛けない。強化スキルが使えるかを見て交換を決める。",
+          "source_sec": 32264,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "アイテム",
+          "detail": "動画ではウェーブを押し付ける方針と、回復を抑える重傷アイテムを対策として挙げている。",
+          "source_sec": 32158,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    },
+    {
+      "name": "ワーウィック",
+      "start_sec": 32758,
+      "end_sec": 33500,
+      "tips": [
+        {
+          "category": "アイテム",
+          "detail": "回復を抑える手段を早めに用意する。動画では勝負するならイグナイト、自分から付与できる重傷装備を優先候補にしている。",
+          "source_sec": 32783,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "トレード",
+          "detail": "短く攻撃してすぐ撤退する。長い殴り合いを避け、リーサルテンポ等の効果が溜まったら切れるまで近寄らない。",
+          "source_sec": 32832,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "注意点",
+          "detail": "瀕死の相手ほど回復を警戒する。低体力にしただけで倒せると思わず、追撃で逆転されないようにする。",
+          "source_sec": 32877,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        },
+        {
+          "category": "基本対策",
+          "detail": "自分の体力を高く保つ方針が動画で示されている。削られたまま無理にCSや交換を狙わない。",
+          "source_sec": 32775,
+          "status": "未確認",
+          "origin": "subtitle_summary"
+        }
+      ]
+    }
+  ]
+}
